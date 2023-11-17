@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/VidaKids-logo.jpg">
+
+    <title>Funavid </title>
+
+    {{>header}}
+</head>
+
+<style>
+    .fotito {
+        border-radius: 50%;
+        width: 50px;
+    }
+</style>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><img src="../images/VidaKids-logo.jpg" alt=""
+                                class="fotito">
+                            <span>FunaVid</span></a>
+                    </div>
+
+
+                    <div class="clearfix"></div>
+
+                        {{>head }}
+
+                    <!-- page content -->
+
+                    <div class="right_col" role="main">
+                        <section>
+                            <div class="titulo_p">
+                                <h1>Gestion de Medicamentos</h1>
+                            </div>
+                            <div class="titulo_s">
+                                <h4>Agregar Medicamentos</h4>
+                            </div>
+
+                            <img src="../images/boton-mas.png" alt="icon" class="icon_add" id="btn-abrir-modal">
+
+                        </section>
+                        <section class="search_icon">
+                            <form class="form-inline my-2 my-lg-0">
+                                <div>
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </div>
+                                <div class="btn-search">
+                                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><img
+                                            src="../images/bx-search-alt.svg" alt=""></button>
+                                </div>
+                            </form>
+
+                        </section>
+
+
+                        <main>
+                            <div class="tabla">
+                                <table id="data-table" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Id Medicamento</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Stock</th>
+                                            <th scope="col">Tipo Cantidad</th>
+                                            <th scope="col">Gramaje</th>
+                                            <th scope="col" class="th_center">Opciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="dow_excel">
+                                <button onclick="exportTableToExcel('tblData')" type="submit" class="boton" name=""
+                                    id="boton">Generar Excel
+                                    <img src="../images/bxs-download.svg" alt=""></button>
+                                <div class="pagination" id="pagination">
+                                    <a id="prevPage">Anterior</a>
+                                    <span id="currentPage">
+                                        <h6>1</h6>
+                                    </span>
+                                    <a id="nextPage">Siguiente</a>
+                                </div>
+                            </div>
+
+                        </main>
+
+                    </div>
+
+                    <style>
+                        .tabla {
+                            justify-content: center;
+                            align-items: center;
+                            display: flex;
+                            margin-left: auto;
+                            padding-left: auto;
+                        }
+
+                        thead.tabla {
+                            font-size: 10px;
+                        }
+
+                        .th_center {
+                            text-align: center;
+                        }
+
+                        .titulo_p {
+                            text-align: center;
+                            margin-top: 70px;
+                        }
+
+                        .titulo_s {
+                            margin-left: 120px;
+                            margin-top: 120px
+                        }
+
+                        .opcion {
+                            display: flex;
+                            justify-content: space-around;
+
+
+                        }
+
+
+                        .opc_edit,
+                        .opc_delete,
+                        .opc_eyes {
+                            width: 25px;
+
+
+                        }
+
+                        .icon_add {
+                            width: 55px;
+                            margin-left: 45px;
+                            margin-top: -70px;
+                        }
+
+                        .search_icon {
+                            width: 200px;
+                            margin-left: 700px;
+                            margin-top: -70px;
+                            display: flex;
+                        }
+
+                        .btn-search {
+                            margin-left: 220px;
+                            margin-top: -38px;
+
+                        }
+
+                        .form-inline {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        .dow_excel {
+                            margin-left: 50px;
+
+
+                        }
+
+                        h1 {
+                            text-align: center;
+                        }
+
+
+                        form {
+                            max-width: 400px;
+                            margin: 0 auto;
+                            padding: 20px;
+                            border-radius: 5px;
+                        }
+
+
+                        label {
+                            display: block;
+                            margin-bottom: 5px;
+                            font-weight: bold;
+                        }
+
+
+                        input[type="text"],
+                        select,
+                        textarea {
+                            width: 100%;
+                            padding: 10px;
+                            margin-bottom: 10px;
+                            border: 1px solid #ccc;
+                            border-radius: 3px;
+                        }
+
+
+                        input[type="file"] {
+                            width: 100%;
+                            padding: 10px;
+                            margin-bottom: 10px;
+                        }
+
+
+                        textarea {
+                            resize: vertical;
+                        }
+
+
+                        input[type="submit"] {
+                            background-color: #007bff;
+                            color: #fff;
+                            border: none;
+                            border-radius: 3px;
+                            padding: 10px 20px;
+                            cursor: pointer;
+                        }
+
+
+                        input[type="submit"]:hover {
+                            background-color: #0056b3;
+                        }
+
+                        .form_g_c {
+                            margin-top: 10px;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        .boton {
+                            background-color: #007bff;
+                            color: #fff;
+                            padding: 10px 20px;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            font-size: 16px;
+                        }
+
+                        .boton:hover {
+                            background-color: #0056b3;
+                        }
+
+                        .lbl-switch {
+                            display: inline-block;
+                            width: 55px;
+                            height: 30px;
+                            background: #e00c0c;
+                            border-radius: 100px;
+                            position: relative;
+                            cursor: pointer;
+                        }
+
+                        #btn-switch:checked~.lbl-switch {
+                            background-color: darkgreen;
+                        }
+
+                        #btn-switch:checked~.lbl-switch:after {
+                            left: 28px;
+                        }
+
+                        .lbl-switch:after {
+                            position: absolute;
+                            content: '';
+                            width: 22px;
+                            height: 22px;
+                            background: #fff;
+                            border-radius: 100px;
+                            top: 4px;
+                            left: 5px;
+                            transition: 0.3s;
+                        }
+
+                        #btn-switch {
+                            display: none;
+                        }
+
+                        .btn-boton-estado {
+                            margin-left: 150px;
+                            margin-top: -37px;
+                        }
+
+                        .pagination {
+                            display: inline;
+                            float: right;
+
+                        }
+
+                        .pagination span {
+                            display: grid;
+                            justify-content: center;
+                            place-items: center;
+                        }
+
+                        .pagination a,
+                        .pagination button {
+                            color: #000000;
+                            padding: 8px 16px;
+                            cursor: pointer;
+                            margin: 2px;
+
+
+                        }
+
+                        .pagination a:hover,
+                        .pagination button:hover {
+                            border: 1px solid #f9fcfe;
+
+                        }
+
+                        #currentPage {
+                            font-size: 15px
+                        }
+                    </style>
+
+                    <script>
+                        function hideshow() {
+                            var password = document.getElementById("password1");
+                            var slash = document.getElementById("slash");
+                            var eye = document.getElementById("eye");
+
+                            if (password.type === 'password') {
+                                password.type = "text";
+                                slash.style.display = "block";
+                                eye.style.display = "none";
+                            }
+                            else {
+                                password.type = "password";
+                                slash.style.display = "none";
+                                eye.style.display = "block";
+                            }
+
+                        };
+
+                        //  Inicio funcion para desscargar
+                        function exportTableToExcel(tableID, filename = '') {
+                            var downloadLink;
+                            var dataType = 'application/vnd.ms-excel';
+                            var tableSelect = document.getElementById(tableID);
+
+                            // Obtén las filas de la tabla
+                            var rows = tableSelect.getElementsByTagName('tr');
+
+                            // Crear un objeto HTML para almacenar solo las columnas deseadas
+                            var filteredTable = document.createElement('table');
+
+                            // Agregar encabezados a la nueva tabla
+                            var headerRow = filteredTable.createTHead().insertRow(0);
+                            headerRow.innerHTML = "<th>Id</th><th>Id acudiente</th><th>Tipo de documento</th><th>Documento</th><th>Nombre completo</th><th>Beneficiario</th><th>Telefono</th><th>Direccion</th><th>Ciudad-Barrio</th>";
+
+                            // Recorrer las filas de la tabla original y copiar solo las columnas deseadas a la nueva tabla
+                            for (var i = 0; i < rows.length; i++) {
+                                var cells = rows[i].getElementsByTagName('td');
+                                if (cells.length >= 5) { // Asegurarse de que haya al menos 5 celdas (las columnas deseadas)
+                                    var newRow = filteredTable.insertRow(-1);
+                                    for (var j = 0; j < 5; j++) { // Copiar solo las primeras 5 celdas (las columnas deseadas)
+                                        var newCell = newRow.insertCell(j);
+                                        newCell.innerHTML = cells[j].innerHTML;
+                                    }
+                                }
+                            }
+
+                            // Convertir la nueva tabla a HTML
+                            var tableHTML = filteredTable.outerHTML.replace(/ /g, '%20');
+
+                            // Especificar el nombre de archivo
+                            filename = filename ? filename + '.xls' : 'Listado_Acudientes.xls';
+
+                            // Crear el elemento de enlace de descarga
+                            downloadLink = document.createElement("a");
+
+                            document.body.appendChild(downloadLink);
+
+                            if (navigator.msSaveOrOpenBlob) {
+                                var blob = new Blob(['ufeff', tableHTML], {
+                                    type: dataType
+                                });
+                                navigator.msSaveOrOpenBlob(blob, filename);
+                            } else {
+                                // Crear un enlace al archivo
+                                downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+                                // Establecer el nombre de archivo
+                                downloadLink.download = filename;
+
+                                // Activar la función
+                                downloadLink.click();
+                            }
+                        }
+                        // Fin de funcion de descarga
+
+                        // inicio de en paginado
+                        const data = [{ "id": 1, "id_Acudiente": 6, "tipo_Documento": "AF", "documento": "8833447685", "nombre_Acudiente": "Pammie Ellard", "fecha_nacimiento_Acudiente": "3/31/2012", "Parentesco": "Fagaceae", "estado": "Steel", "telefono": "+81 (910) 356-1615", "direccion": "87038 Main Plaza", "ciudad_barrio": "Heath", "beneficiario": "Pammie" },
+                        { "id": 2, "id_Acudiente": 9, "tipo_Documento": "NA", "documento": "4952147711", "nombre_Acudiente": "Anthiathia Benedit", "fecha_nacimiento_Acudiente": "1/18/1970", "Parentesco": "Rhamnaceae", "estado": "Vinyl", "telefono": "+380 (712) 742-7763", "direccion": "31482 Cherokee Park", "ciudad_barrio": "Main", "beneficiario": "Anthiathia" },
+                        { "id": 3, "id_Acudiente": 3, "tipo_Documento": "EU", "documento": "2155874596", "nombre_Acudiente": "Keary Ingarfield", "fecha_nacimiento_Acudiente": "5/5/1963", "Parentesco": "Polygonaceae", "estado": "Aluminum", "telefono": "+1 (504) 829-2390", "direccion": "92412 Calypso Parkway", "ciudad_barrio": "Coolidge", "beneficiario": "Keary" },
+                        { "id": 4, "id_Acudiente": 10, "tipo_Documento": "OC", "documento": "8813895186", "nombre_Acudiente": "Lauren Doumic", "fecha_nacimiento_Acudiente": "3/15/1958", "Parentesco": "Scrophulariaceae", "estado": "Brass", "telefono": "+52 (510) 879-0605", "direccion": "46 Marquette Way", "ciudad_barrio": "Twin Pines", "beneficiario": "Lauren" },
+                        { "id": 5, "id_Acudiente": 2, "tipo_Documento": "AS", "documento": "1793747342", "nombre_Acudiente": "Sylas Lanfare", "fecha_nacimiento_Acudiente": "11/5/1939", "Parentesco": "Oleaceae", "estado": "Glass", "telefono": "+86 (986) 321-5404", "direccion": "6 Mandrake Hill", "ciudad_barrio": "Mockingbird", "beneficiario": "Sylas" },
+                        { "id": 6, "id_Acudiente": 5, "tipo_Documento": "NA", "documento": "5108674325", "nombre_Acudiente": "Dimitri De Ferraris", "fecha_nacimiento_Acudiente": "5/19/1966", "Parentesco": "Ranunculaceae", "estado": "Stone", "telefono": "+252 (481) 590-7332", "direccion": "77 Paget Trail", "ciudad_barrio": "Tennessee", "beneficiario": "Dimitri" },
+                        { "id": 7, "id_Acudiente": 4, "tipo_Documento": "OC", "documento": "1942045573", "nombre_Acudiente": "Lizzy Wreight", "fecha_nacimiento_Acudiente": "9/10/1936", "Parentesco": "Poaceae", "estado": "Glass", "telefono": "+86 (832) 384-4625", "direccion": "008 Express Place", "ciudad_barrio": "Westerfield", "beneficiario": "Lizzy" },
+                        { "id": 8, "id_Acudiente": 2, "tipo_Documento": "OC", "documento": "0643535691", "nombre_Acudiente": "Gunar Fasson", "fecha_nacimiento_Acudiente": "12/25/1966", "Parentesco": "Cyperaceae", "estado": "Plexiglass", "telefono": "+218 (566) 924-3065", "direccion": "8 Melvin Street", "ciudad_barrio": "Buell", "beneficiario": "Gunar" },
+                        { "id": 9, "id_Acudiente": 7, "tipo_Documento": "EU", "documento": "4325528873", "nombre_Acudiente": "Darrick Woofenden", "fecha_nacimiento_Acudiente": "10/11/1973", "Parentesco": "Teloschistaceae", "estado": "Stone", "telefono": "+7 (336) 193-6120", "direccion": "24 Bay Hill", "ciudad_barrio": "Eggendart", "beneficiario": "Darrick" },
+                        { "id": 10, "id_Acudiente": 8, "tipo_Documento": "AS", "documento": "6141487572", "nombre_Acudiente": "Jonas Leak", "fecha_nacimiento_Acudiente": "3/2/1946", "Parentesco": "Asteraceae", "estado": "Vinyl", "telefono": "+62 (603) 514-8364", "direccion": "095 Brentwood Plaza", "ciudad_barrio": "Straubel", "beneficiario": "Jonas" },
+                        { "id": 11, "id_Acudiente": 6, "tipo_Documento": "NA", "documento": "4314935936", "nombre_Acudiente": "Arte Braycotton", "fecha_nacimiento_Acudiente": "4/20/1986", "Parentesco": "Poaceae", "estado": "Plastic", "telefono": "+31 (569) 300-3746", "direccion": "8 Eagle Crest Trail", "ciudad_barrio": "Summerview", "beneficiario": "Arte" },
+                        { "id": 12, "id_Acudiente": 2, "tipo_Documento": "AF", "documento": "4312355207", "nombre_Acudiente": "Uta McSorley", "fecha_nacimiento_Acudiente": "2/16/1905", "Parentesco": "Asteraceae", "estado": "Stone", "telefono": "+1 (302) 181-4891", "direccion": "840 Johnson Place", "ciudad_barrio": "Lake View", "beneficiario": "Uta" },
+                        { "id": 13, "id_Acudiente": 8, "tipo_Documento": "SA", "documento": "8736859095", "nombre_Acudiente": "Lanae Anan", "fecha_nacimiento_Acudiente": "6/26/1971", "Parentesco": "Fabaceae", "estado": "Granite", "telefono": "+63 (916) 449-9097", "direccion": "444 Manitowish Place", "ciudad_barrio": "Blackbird", "beneficiario": "Lanae" },
+                        { "id": 14, "id_Acudiente": 4, "tipo_Documento": "OC", "documento": "2356549870", "nombre_Acudiente": "Melosa Tombs", "fecha_nacimiento_Acudiente": "6/10/1988", "Parentesco": "Clusiaceae", "estado": "Glass", "telefono": "+34 (165) 513-0390", "direccion": "70069 Melrose Trail", "ciudad_barrio": "Schurz", "beneficiario": "Melosa" },
+                        { "id": 15, "id_Acudiente": 9, "tipo_Documento": "SA", "documento": "5129953088", "nombre_Acudiente": "Tull Lambshine", "fecha_nacimiento_Acudiente": "6/29/2002", "Parentesco": "Asteraceae", "estado": "Aluminum", "telefono": "+46 (948) 448-8454", "direccion": "68240 Straubel Pass", "ciudad_barrio": "Service", "beneficiario": "Tull" },
+                        { "id": 16, "id_Acudiente": 6, "tipo_Documento": "EU", "documento": "0955407087", "nombre_Acudiente": "Warner Howton", "fecha_nacimiento_Acudiente": "8/29/2012", "Parentesco": "Polygonaceae", "estado": "Plexiglass", "telefono": "+351 (321) 531-1011", "direccion": "68 Hudson Hill", "ciudad_barrio": "Sunnyside", "beneficiario": "Warner" },
+                        { "id": 17, "id_Acudiente": 10, "tipo_Documento": "OC", "documento": "4683056186", "nombre_Acudiente": "Tillie Margrett", "fecha_nacimiento_Acudiente": "7/4/1943", "Parentesco": "Caprifoliaceae", "estado": "Plastic", "telefono": "+358 (923) 693-9345", "direccion": "39977 Milwaukee Trail", "ciudad_barrio": "Prairie Rose", "beneficiario": "Tillie" },
+                        { "id": 18, "id_Acudiente": 6, "tipo_Documento": "OC", "documento": "7355925695", "nombre_Acudiente": "Yance Rajchert", "fecha_nacimiento_Acudiente": "7/14/1999", "Parentesco": "Leskeaceae", "estado": "Plastic", "telefono": "+52 (240) 897-7598", "direccion": "8800 Lakewood Gardens Circle", "ciudad_barrio": "Buell", "beneficiario": "Yance" },
+                        { "id": 19, "id_Acudiente": 6, "tipo_Documento": "AS", "documento": "0734899106", "nombre_Acudiente": "Carmen Nitti", "fecha_nacimiento_Acudiente": "3/4/1931", "Parentesco": "Asteraceae", "estado": "Rubber", "telefono": "+54 (499) 253-5774", "direccion": "768 Melrose Alley", "ciudad_barrio": "Moulton", "beneficiario": "Carmen" },
+                        { "id": 20, "id_Acudiente": 5, "tipo_Documento": "NA", "documento": "4753911004", "nombre_Acudiente": "Sharla Keohane", "fecha_nacimiento_Acudiente": "1/30/1911", "Parentesco": "Rosaceae", "estado": "Plexiglass", "telefono": "+976 (457) 214-5541", "direccion": "7421 Sycamore Circle", "ciudad_barrio": "Huxley", "beneficiario": "Sharla" },
+                        { "id": 21, "id_Acudiente": 8, "tipo_Documento": "AS", "documento": "9336953400", "nombre_Acudiente": "Britteny Castagnasso", "fecha_nacimiento_Acudiente": "9/12/1905", "Parentesco": "Aspleniaceae", "estado": "Aluminum", "telefono": "+86 (686) 273-2144", "direccion": "4785 Karstens Pass", "ciudad_barrio": "5th", "beneficiario": "Britteny" },
+                        { "id": 22, "id_Acudiente": 3, "tipo_Documento": "AF", "documento": "9328919231", "nombre_Acudiente": "Arri Weetch", "fecha_nacimiento_Acudiente": "10/15/1915", "Parentesco": "Asteraceae", "estado": "Plastic", "telefono": "+81 (318) 739-6670", "direccion": "79200 Wayridge Lane", "ciudad_barrio": "Rutledge", "beneficiario": "Arri" },
+                        { "id": 23, "id_Acudiente": 10, "tipo_Documento": "AF", "documento": "1479861243", "nombre_Acudiente": "Nani Cardwell", "fecha_nacimiento_Acudiente": "12/6/1920", "Parentesco": "Melastomataceae", "estado": "Aluminum", "telefono": "+86 (181) 119-9650", "direccion": "7388 La Follette Street", "ciudad_barrio": "Farwell", "beneficiario": "Nani" },
+                        { "id": 24, "id_Acudiente": 10, "tipo_Documento": "AS", "documento": "7534406331", "nombre_Acudiente": "Magnum Carruth", "fecha_nacimiento_Acudiente": "5/13/1966", "Parentesco": "Juncaceae", "estado": "Rubber", "telefono": "+7 (179) 539-8761", "direccion": "31292 Barby Road", "ciudad_barrio": "Leroy", "beneficiario": "Magnum" },
+                        { "id": 25, "id_Acudiente": 9, "tipo_Documento": "NA", "documento": "4579201833", "nombre_Acudiente": "Garner Meran", "fecha_nacimiento_Acudiente": "8/24/1987", "Parentesco": "Asteraceae", "estado": "Glass", "telefono": "+7 (145) 614-4539", "direccion": "81246 Banding Lane", "ciudad_barrio": "Sachtjen", "beneficiario": "Garner" },
+                        { "id": 26, "id_Acudiente": 3, "tipo_Documento": "AF", "documento": "1016024894", "nombre_Acudiente": "Larina Vedeneev", "fecha_nacimiento_Acudiente": "12/27/1965", "Parentesco": "Valerianaceae", "estado": "Stone", "telefono": "+46 (764) 982-9002", "direccion": "991 Comanche Trail", "ciudad_barrio": "Colorado", "beneficiario": "Larina" },
+                        { "id": 27, "id_Acudiente": 6, "tipo_Documento": "EU", "documento": "8422233622", "nombre_Acudiente": "Carlee Clementel", "fecha_nacimiento_Acudiente": "6/17/1936", "Parentesco": "Scrophulariaceae", "estado": "Steel", "telefono": "+86 (431) 750-2689", "direccion": "366 Morningstar Way", "ciudad_barrio": "Hoffman", "beneficiario": "Carlee" },
+                        { "id": 28, "id_Acudiente": 6, "tipo_Documento": "AS", "documento": "5835817800", "nombre_Acudiente": "Ravid Trewman", "fecha_nacimiento_Acudiente": "3/11/1951", "Parentesco": "Iridaceae", "estado": "Aluminum", "telefono": "+57 (332) 417-4231", "direccion": "3646 Arapahoe Avenue", "ciudad_barrio": "Prentice", "beneficiario": "Ravid" },
+                        { "id": 29, "id_Acudiente": 5, "tipo_Documento": "OC", "documento": "8464259212", "nombre_Acudiente": "Raven Kittoe", "fecha_nacimiento_Acudiente": "10/26/1939", "Parentesco": "Campanulaceae", "estado": "Glass", "telefono": "+1 (202) 167-9105", "direccion": "1 Grasskamp Drive", "ciudad_barrio": "Fordem", "beneficiario": "Raven" },
+                        { "id": 30, "id_Acudiente": 5, "tipo_Documento": "OC", "documento": "9219484447", "nombre_Acudiente": "Andros Chaulk", "fecha_nacimiento_Acudiente": "1/8/1944", "Parentesco": "Scrophulariaceae", "estado": "Vinyl", "telefono": "+46 (689) 332-8302", "direccion": "634 Michigan Alley", "ciudad_barrio": "Grayhawk", "beneficiario": "Andros" },
+                        { "id": 31, "id_Acudiente": 2, "tipo_Documento": "OC", "documento": "8125211985", "nombre_Acudiente": "Lucila Wiffler", "fecha_nacimiento_Acudiente": "8/4/1901", "Parentesco": "Juncaceae", "estado": "Stone", "telefono": "+86 (850) 696-5854", "direccion": "861 Debs Alley", "ciudad_barrio": "Judy", "beneficiario": "Lucila" },
+                        { "id": 32, "id_Acudiente": 1, "tipo_Documento": "SA", "documento": "4394362768", "nombre_Acudiente": "Lyndel Erswell", "fecha_nacimiento_Acudiente": "5/9/1977", "Parentesco": "Onagraceae", "estado": "Plexiglass", "telefono": "+63 (957) 501-3721", "direccion": "780 Ridge Oak Way", "ciudad_barrio": "Forest", "beneficiario": "Lyndel" },
+                        { "id": 33, "id_Acudiente": 7, "tipo_Documento": "AF", "documento": "1837827761", "nombre_Acudiente": "Cal Barck", "fecha_nacimiento_Acudiente": "5/14/2004", "Parentesco": "Orthotrichaceae", "estado": "Rubber", "telefono": "+62 (927) 400-6134", "direccion": "88 Dennis Street", "ciudad_barrio": "Porter", "beneficiario": "Cal" },
+                        { "id": 34, "id_Acudiente": 4, "tipo_Documento": "SA", "documento": "2950100031", "nombre_Acudiente": "Reine Birkinshaw", "fecha_nacimiento_Acudiente": "11/9/1975", "Parentesco": "Brassicaceae", "estado": "Steel", "telefono": "+62 (482) 761-9188", "direccion": "2957 Hallows Park", "ciudad_barrio": "Corscot", "beneficiario": "Reine" },
+                        { "id": 35, "id_Acudiente": 9, "tipo_Documento": "AS", "documento": "0665185359", "nombre_Acudiente": "Tobye De Matteis", "fecha_nacimiento_Acudiente": "1/7/1936", "Parentesco": "Trichotheliaceae", "estado": "Rubber", "telefono": "+55 (726) 436-8339", "direccion": "19 Hudson Avenue", "ciudad_barrio": "Quincy", "beneficiario": "Tobye" },
+                        { "id": 36, "id_Acudiente": 9, "tipo_Documento": "AS", "documento": "6135513516", "nombre_Acudiente": "Arv Narracott", "fecha_nacimiento_Acudiente": "6/21/2007", "Parentesco": "Solanaceae", "estado": "Plexiglass", "telefono": "+48 (637) 652-6465", "direccion": "6965 Cherokee Avenue", "ciudad_barrio": "Menomonie", "beneficiario": "Arv" },
+                        { "id": 37, "id_Acudiente": 3, "tipo_Documento": "NA", "documento": "1922396249", "nombre_Acudiente": "Wendeline Bayly", "fecha_nacimiento_Acudiente": "10/19/1991", "Parentesco": "Saxifragaceae", "estado": "Steel", "telefono": "+33 (309) 945-0265", "direccion": "15122 Graceland Circle", "ciudad_barrio": "Paget", "beneficiario": "Wendeline" },
+                        { "id": 38, "id_Acudiente": 9, "tipo_Documento": "EU", "documento": "8290326831", "nombre_Acudiente": "Erinna De Benedetti", "fecha_nacimiento_Acudiente": "12/5/2004", "Parentesco": "Liliaceae", "estado": "Plastic", "telefono": "+81 (169) 193-9112", "direccion": "46 Caliangt Way", "ciudad_barrio": "Ryan", "beneficiario": "Erinna" },
+                        { "id": 39, "id_Acudiente": 1, "tipo_Documento": "AF", "documento": "5520755167", "nombre_Acudiente": "Ruby Thomlinson", "fecha_nacimiento_Acudiente": "12/1/1916", "Parentesco": "Fabaceae", "estado": "Rubber", "telefono": "+226 (784) 759-9478", "direccion": "57612 Artisan Center", "ciudad_barrio": "Arapahoe", "beneficiario": "Ruby" },
+                        { "id": 40, "id_Acudiente": 2, "tipo_Documento": "AS", "documento": "8717872855", "nombre_Acudiente": "Major Grimmert", "fecha_nacimiento_Acudiente": "5/2/2000", "Parentesco": "Brassicaceae", "estado": "Rubber", "telefono": "+84 (607) 547-2957", "direccion": "0292 Badeau Pass", "ciudad_barrio": "1st", "beneficiario": "Major" },
+                        { "id": 41, "id_Acudiente": 7, "tipo_Documento": "EU", "documento": "9145037035", "nombre_Acudiente": "Lauraine Bucky", "fecha_nacimiento_Acudiente": "7/7/1955", "Parentesco": "Saxifragaceae", "estado": "Rubber", "telefono": "+1 (260) 815-1181", "direccion": "871 Sutteridge Court", "ciudad_barrio": "Lerdahl", "beneficiario": "Lauraine" },
+                        { "id": 42, "id_Acudiente": 6, "tipo_Documento": "AS", "documento": "3829370210", "nombre_Acudiente": "Denny Dochon", "fecha_nacimiento_Acudiente": "11/22/2007", "Parentesco": "Polygonaceae", "estado": "Aluminum", "telefono": "+234 (369) 105-5701", "direccion": "91 Caliangt Parkway", "ciudad_barrio": "Moose", "beneficiario": "Denny" },
+                        { "id": 43, "id_Acudiente": 4, "tipo_Documento": "NA", "documento": "0476442982", "nombre_Acudiente": "Halette Buxam", "fecha_nacimiento_Acudiente": "11/5/2016", "Parentesco": "Melastomataceae", "estado": "Plexiglass", "telefono": "+380 (194) 669-3335", "direccion": "22 Oak Parkway", "ciudad_barrio": "Kinsman", "beneficiario": "Halette" },
+                        { "id": 44, "id_Acudiente": 9, "tipo_Documento": "NA", "documento": "3207406823", "nombre_Acudiente": "Donnie Annion", "fecha_nacimiento_Acudiente": "3/19/1906", "Parentesco": "Theophrastaceae", "estado": "Aluminum", "telefono": "+86 (755) 638-6135", "direccion": "16536 Northwestern Junction", "ciudad_barrio": "Loftsgordon", "beneficiario": "Donnie" },
+                        { "id": 45, "id_Acudiente": 6, "tipo_Documento": "AS", "documento": "4965464648", "nombre_Acudiente": "Cloe McLuckie", "fecha_nacimiento_Acudiente": "9/11/1916", "Parentesco": "Saxifragaceae", "estado": "Steel", "telefono": "+86 (703) 784-0863", "direccion": "592 Michigan Lane", "ciudad_barrio": "Corscot", "beneficiario": "Cloe" },
+                        { "id": 46, "id_Acudiente": 2, "tipo_Documento": "NA", "documento": "3502707324", "nombre_Acudiente": "Huntley Farrand", "fecha_nacimiento_Acudiente": "2/26/1956", "Parentesco": "Asteraceae", "estado": "Plexiglass", "telefono": "+86 (212) 720-9873", "direccion": "71 Lien Trail", "ciudad_barrio": "Rieder", "beneficiario": "Huntley" },
+                        { "id": 47, "id_Acudiente": 9, "tipo_Documento": "SA", "documento": "3941432796", "nombre_Acudiente": "Denyse Rendle", "fecha_nacimiento_Acudiente": "7/18/1939", "Parentesco": "Meliaceae", "estado": "Glass", "telefono": "+252 (261) 881-4388", "direccion": "8221 Nancy Place", "ciudad_barrio": "Anzinger", "beneficiario": "Denyse" },
+                        { "id": 48, "id_Acudiente": 2, "tipo_Documento": "NA", "documento": "5179230519", "nombre_Acudiente": "Nora De Vaar", "fecha_nacimiento_Acudiente": "10/28/1932", "Parentesco": "Boraginaceae", "estado": "Plastic", "telefono": "+86 (543) 379-1987", "direccion": "99 Linden Road", "ciudad_barrio": "Fuller", "beneficiario": "Nora" },
+                        { "id": 49, "id_Acudiente": 8, "tipo_Documento": "EU", "documento": "4916418964", "nombre_Acudiente": "Judah Sange", "fecha_nacimiento_Acudiente": "1/22/1963", "Parentesco": "Lamiaceae", "estado": "Rubber", "telefono": "+86 (325) 949-6455", "direccion": "46798 Little Fleur Parkway", "ciudad_barrio": "Loeprich", "beneficiario": "Judah" },
+                        { "id": 50, "id_Acudiente": 3, "tipo_Documento": "AF", "documento": "9467775166", "nombre_Acudiente": "Heather Larvor", "fecha_nacimiento_Acudiente": "6/19/2023", "Parentesco": "Burseraceae", "estado": "Brass", "telefono": "+353 (709) 808-8080", "direccion": "842 Nova Parkway", "ciudad_barrio": "Little Fleur", "beneficiario": "Heather" },
+                        { "id": 51, "id_Acudiente": 10, "tipo_Documento": "AS", "documento": "8125158936", "nombre_Acudiente": "Baldwin Praton", "fecha_nacimiento_Acudiente": "2/25/1957", "Parentesco": "Polemoniaceae", "estado": "Vinyl", "telefono": "+970 (192) 993-8848", "direccion": "16980 Hoepker Center", "ciudad_barrio": "Kingsford", "beneficiario": "Baldwin" },
+                        { "id": 52, "id_Acudiente": 7, "tipo_Documento": "NA", "documento": "7583206693", "nombre_Acudiente": "Maureen Kennefick", "fecha_nacimiento_Acudiente": "7/1/1904", "Parentesco": "Asteraceae", "estado": "Granite", "telefono": "+7 (916) 471-0414", "direccion": "573 Ruskin Street", "ciudad_barrio": "Muir", "beneficiario": "Maureen" },
+                        { "id": 53, "id_Acudiente": 1, "tipo_Documento": "EU", "documento": "8908287833", "nombre_Acudiente": "Anet Cristofori", "fecha_nacimiento_Acudiente": "8/26/1998", "Parentesco": "Agavaceae", "estado": "Wood", "telefono": "+63 (980) 855-1672", "direccion": "2 Lakewood Gardens Alley", "ciudad_barrio": "Green", "beneficiario": "Anet" },
+                        { "id": 54, "id_Acudiente": 7, "tipo_Documento": "EU", "documento": "9358323922", "nombre_Acudiente": "Cathrine Scahill", "fecha_nacimiento_Acudiente": "10/23/1969", "Parentesco": "Malvaceae", "estado": "Rubber", "telefono": "+86 (969) 588-8528", "direccion": "94373 Anzinger Lane", "ciudad_barrio": "Bartillon", "beneficiario": "Cathrine" },
+                        { "id": 55, "id_Acudiente": 9, "tipo_Documento": "AS", "documento": "0862663199", "nombre_Acudiente": "Hendrik Dunster", "fecha_nacimiento_Acudiente": "10/15/1988", "Parentesco": "Splachnaceae", "estado": "Granite", "telefono": "+62 (861) 781-7977", "direccion": "97452 Kipling Pass", "ciudad_barrio": "Comanche", "beneficiario": "Hendrik" },
+                        { "id": 56, "id_Acudiente": 2, "tipo_Documento": "SA", "documento": "1064749399", "nombre_Acudiente": "Deva Sawyer", "fecha_nacimiento_Acudiente": "2/10/1944", "Parentesco": "Boraginaceae", "estado": "Aluminum", "telefono": "+234 (471) 475-6359", "direccion": "64 Sachs Drive", "ciudad_barrio": "Rigney", "beneficiario": "Deva" },
+                        { "id": 57, "id_Acudiente": 7, "tipo_Documento": "AS", "documento": "3634002646", "nombre_Acudiente": "Ragnar Piscopiello", "fecha_nacimiento_Acudiente": "4/9/1952", "Parentesco": "Asteraceae", "estado": "Rubber", "telefono": "+48 (101) 624-5429", "direccion": "6 Sycamore Plaza", "ciudad_barrio": "Lillian", "beneficiario": "Ragnar" },
+                        { "id": 58, "id_Acudiente": 2, "tipo_Documento": "AF", "documento": "7144740539", "nombre_Acudiente": "Joellyn Blaxter", "fecha_nacimiento_Acudiente": "11/8/2011", "Parentesco": "Asteraceae", "estado": "Plastic", "telefono": "+62 (632) 860-9969", "direccion": "576 Dunning Lane", "ciudad_barrio": "Carberry", "beneficiario": "Joellyn" },
+                        { "id": 59, "id_Acudiente": 6, "tipo_Documento": "NA", "documento": "4226598881", "nombre_Acudiente": "Jilli Angier", "fecha_nacimiento_Acudiente": "6/2/1913", "Parentesco": "Campanulaceae", "estado": "Glass", "telefono": "+63 (949) 757-6423", "direccion": "71 Swallow Plaza", "ciudad_barrio": "Hermina", "beneficiario": "Jilli" },
+                        { "id": 60, "id_Acudiente": 4, "tipo_Documento": "NA", "documento": "9827765175", "nombre_Acudiente": "Andriette Stooke", "fecha_nacimiento_Acudiente": "12/17/1943", "Parentesco": "Poaceae", "estado": "Brass", "telefono": "+54 (541) 727-9798", "direccion": "757 Arkansas Road", "ciudad_barrio": "Brentwood", "beneficiario": "Andriette" },
+                        { "id": 61, "id_Acudiente": 4, "tipo_Documento": "EU", "documento": "1746565764", "nombre_Acudiente": "Larry Rodenborch", "fecha_nacimiento_Acudiente": "6/9/1930", "Parentesco": "Juncaceae", "estado": "Stone", "telefono": "+55 (860) 310-2305", "direccion": "5756 3rd Place", "ciudad_barrio": "Coolidge", "beneficiario": "Larry" },
+                        { "id": 62, "id_Acudiente": 8, "tipo_Documento": "NA", "documento": "6016674435", "nombre_Acudiente": "Shepperd Crosse", "fecha_nacimiento_Acudiente": "3/30/1996", "Parentesco": "Fabaceae", "estado": "Steel", "telefono": "+63 (662) 109-1635", "direccion": "88 Jana Junction", "ciudad_barrio": "Ridgeway", "beneficiario": "Shepperd" },
+                        { "id": 63, "id_Acudiente": 4, "tipo_Documento": "SA", "documento": "1831209403", "nombre_Acudiente": "Babb Arbor", "fecha_nacimiento_Acudiente": "4/10/1938", "Parentesco": "Graphidaceae", "estado": "Wood", "telefono": "+62 (217) 322-4864", "direccion": "685 Russell Crossing", "ciudad_barrio": "Lunder", "beneficiario": "Babb" },
+                        { "id": 64, "id_Acudiente": 2, "tipo_Documento": "OC", "documento": "8533926545", "nombre_Acudiente": "Clemmie MacKessock", "fecha_nacimiento_Acudiente": "5/9/1961", "Parentesco": "Asteraceae", "estado": "Glass", "telefono": "+380 (234) 969-3213", "direccion": "5 Gerald Court", "ciudad_barrio": "Scott", "beneficiario": "Clemmie" },
+                        { "id": 65, "id_Acudiente": 2, "tipo_Documento": "AS", "documento": "9111709952", "nombre_Acudiente": "Burt Ranner", "fecha_nacimiento_Acudiente": "7/7/1900", "Parentesco": "Scrophulariaceae", "estado": "Wood", "telefono": "+380 (322) 757-7164", "direccion": "252 Bayside Way", "ciudad_barrio": "Burning Wood", "beneficiario": "Burt" },
+                        { "id": 66, "id_Acudiente": 9, "tipo_Documento": "AS", "documento": "5693356388", "nombre_Acudiente": "Cathlene Kleinholz", "fecha_nacimiento_Acudiente": "11/24/1932", "Parentesco": "Boraginaceae", "estado": "Glass", "telefono": "+86 (746) 841-3379", "direccion": "99 Old Shore Avenue", "ciudad_barrio": "Fordem", "beneficiario": "Cathlene" },
+                        { "id": 67, "id_Acudiente": 2, "tipo_Documento": "AS", "documento": "5038213898", "nombre_Acudiente": "Holli Lampaert", "fecha_nacimiento_Acudiente": "8/9/1981", "Parentesco": "Aristolochiaceae", "estado": "Glass", "telefono": "+46 (950) 214-9090", "direccion": "783 Clarendon Crossing", "ciudad_barrio": "Golf Course", "beneficiario": "Holli" },
+                        { "id": 68, "id_Acudiente": 4, "tipo_Documento": "EU", "documento": "5528291194", "nombre_Acudiente": "Beret Luard", "fecha_nacimiento_Acudiente": "10/21/1954", "Parentesco": "Ranunculaceae", "estado": "Stone", "telefono": "+60 (359) 245-5823", "direccion": "3 Canary Circle", "ciudad_barrio": "East", "beneficiario": "Beret" },
+                        { "id": 69, "id_Acudiente": 2, "tipo_Documento": "AS", "documento": "5798445054", "nombre_Acudiente": "Sybille Minihane", "fecha_nacimiento_Acudiente": "5/3/1985", "Parentesco": "Euphorbiaceae", "estado": "Aluminum", "telefono": "+33 (805) 958-7639", "direccion": "97 Armistice Court", "ciudad_barrio": "Dunning", "beneficiario": "Sybille" },
+                        { "id": 70, "id_Acudiente": 4, "tipo_Documento": "NA", "documento": "0863807577", "nombre_Acudiente": "Raynor MacDiarmond", "fecha_nacimiento_Acudiente": "10/23/1906", "Parentesco": "Rosaceae", "estado": "Aluminum", "telefono": "+7 (399) 370-1264", "direccion": "3952 Birchwood Pass", "ciudad_barrio": "Rigney", "beneficiario": "Raynor" },
+                        { "id": 71, "id_Acudiente": 7, "tipo_Documento": "AS", "documento": "0035716657", "nombre_Acudiente": "Pebrook Dalyiel", "fecha_nacimiento_Acudiente": "7/24/1933", "Parentesco": "Cyperaceae", "estado": "Steel", "telefono": "+7 (733) 565-9138", "direccion": "7 Talisman Alley", "ciudad_barrio": "Mockingbird", "beneficiario": "Pebrook" },
+                        { "id": 72, "id_Acudiente": 4, "tipo_Documento": "SA", "documento": "0689120559", "nombre_Acudiente": "Judi Wrangle", "fecha_nacimiento_Acudiente": "11/1/2006", "Parentesco": "Fabaceae", "estado": "Plastic", "telefono": "+420 (469) 781-9272", "direccion": "2 Darwin Pass", "ciudad_barrio": "Mcbride", "beneficiario": "Judi" },
+                        { "id": 73, "id_Acudiente": 3, "tipo_Documento": "AF", "documento": "5238864027", "nombre_Acudiente": "Chauncey Littlecote", "fecha_nacimiento_Acudiente": "8/20/1906", "Parentesco": "Verbenaceae", "estado": "Brass", "telefono": "+48 (161) 641-9898", "direccion": "454 Harper Center", "ciudad_barrio": "Blaine", "beneficiario": "Chauncey" },
+                        { "id": 74, "id_Acudiente": 8, "tipo_Documento": "NA", "documento": "1682160513", "nombre_Acudiente": "Jerrie Try", "fecha_nacimiento_Acudiente": "10/27/1910", "Parentesco": "Ophioglossaceae", "estado": "Glass", "telefono": "+86 (331) 348-0496", "direccion": "16 Colorado Place", "ciudad_barrio": "Express", "beneficiario": "Jerrie" },
+                        { "id": 75, "id_Acudiente": 9, "tipo_Documento": "OC", "documento": "4744886043", "nombre_Acudiente": "Rahal Sams", "fecha_nacimiento_Acudiente": "5/28/1969", "Parentesco": "Asteraceae", "estado": "Stone", "telefono": "+84 (835) 450-7963", "direccion": "89778 Hovde Court", "ciudad_barrio": "Truax", "beneficiario": "Rahal" },
+                        { "id": 76, "id_Acudiente": 5, "tipo_Documento": "EU", "documento": "4617290370", "nombre_Acudiente": "Opalina Biddleston", "fecha_nacimiento_Acudiente": "11/2/1934", "Parentesco": "Asteraceae", "estado": "Granite", "telefono": "+420 (422) 246-0518", "direccion": "71 Lake View Point", "ciudad_barrio": "Alpine", "beneficiario": "Opalina" },
+                        { "id": 77, "id_Acudiente": 3, "tipo_Documento": "AS", "documento": "3929014157", "nombre_Acudiente": "Caesar Halesworth", "fecha_nacimiento_Acudiente": "8/24/1944", "Parentesco": "Blechnaceae", "estado": "Glass", "telefono": "+64 (370) 285-4953", "direccion": "0813 Eastwood Terrace", "ciudad_barrio": "Dayton", "beneficiario": "Caesar" },
+                        { "id": 78, "id_Acudiente": 9, "tipo_Documento": "OC", "documento": "0540652687", "nombre_Acudiente": "Rube Moon", "fecha_nacimiento_Acudiente": "11/19/1917", "Parentesco": "Salicaceae", "estado": "Glass", "telefono": "+504 (310) 640-5330", "direccion": "28109 Hoard Place", "ciudad_barrio": "Sommers", "beneficiario": "Rube" },
+                        { "id": 79, "id_Acudiente": 6, "tipo_Documento": "OC", "documento": "9331500025", "nombre_Acudiente": "Siouxie Ioselevich", "fecha_nacimiento_Acudiente": "1/21/1945", "Parentesco": "Asteraceae", "estado": "Vinyl", "telefono": "+86 (840) 593-8956", "direccion": "86004 Kinsman Lane", "ciudad_barrio": "Bartelt", "beneficiario": "Siouxie" },
+                        { "id": 80, "id_Acudiente": 9, "tipo_Documento": "SA", "documento": "3117508686", "nombre_Acudiente": "Jackie Exell", "fecha_nacimiento_Acudiente": "9/6/1905", "Parentesco": "Asteraceae", "estado": "Steel", "telefono": "+63 (505) 785-9108", "direccion": "645 Farragut Circle", "ciudad_barrio": "Elgar", "beneficiario": "Jackie" },
+                        { "id": 81, "id_Acudiente": 4, "tipo_Documento": "NA", "documento": "1110802129", "nombre_Acudiente": "Shirline Eary", "fecha_nacimiento_Acudiente": "5/22/1923", "Parentesco": "Parmeliaceae", "estado": "Plexiglass", "telefono": "+998 (757) 310-0879", "direccion": "18579 Hallows Court", "ciudad_barrio": "Elgar", "beneficiario": "Shirline" },
+                        { "id": 82, "id_Acudiente": 9, "tipo_Documento": "EU", "documento": "4430168512", "nombre_Acudiente": "Carl McAless", "fecha_nacimiento_Acudiente": "9/18/2008", "Parentesco": "Fabaceae", "estado": "Plexiglass", "telefono": "+505 (246) 997-9702", "direccion": "246 Oak Trail", "ciudad_barrio": "Coleman", "beneficiario": "Carl" },
+                        { "id": 83, "id_Acudiente": 3, "tipo_Documento": "AS", "documento": "9602030100", "nombre_Acudiente": "Filmer Flemmich", "fecha_nacimiento_Acudiente": "2/18/2004", "Parentesco": "Fabaceae", "estado": "Glass", "telefono": "+7 (971) 985-0410", "direccion": "5728 Briar Crest Junction", "ciudad_barrio": "Welch", "beneficiario": "Filmer" },
+                        { "id": 84, "id_Acudiente": 5, "tipo_Documento": "NA", "documento": "9483167396", "nombre_Acudiente": "Delphine Pignon", "fecha_nacimiento_Acudiente": "4/5/1983", "Parentesco": "Verrucariaceae", "estado": "Brass", "telefono": "+385 (980) 494-8292", "direccion": "23390 Troy Lane", "ciudad_barrio": "Clove", "beneficiario": "Delphine" },
+                        { "id": 85, "id_Acudiente": 8, "tipo_Documento": "OC", "documento": "6487179469", "nombre_Acudiente": "Cora Normanvell", "fecha_nacimiento_Acudiente": "10/31/1929", "Parentesco": "Fabaceae", "estado": "Plexiglass", "telefono": "+86 (201) 414-6405", "direccion": "5410 John Wall Hill", "ciudad_barrio": "Randy", "beneficiario": "Cora" },
+                        { "id": 86, "id_Acudiente": 5, "tipo_Documento": "NA", "documento": "6698314099", "nombre_Acudiente": "Corina McHan", "fecha_nacimiento_Acudiente": "6/3/1999", "Parentesco": "Pertusariaceae", "estado": "Aluminum", "telefono": "+351 (745) 597-5765", "direccion": "76618 Schiller Lane", "ciudad_barrio": "Little Fleur", "beneficiario": "Corina" },
+                        { "id": 87, "id_Acudiente": 9, "tipo_Documento": "NA", "documento": "7707201337", "nombre_Acudiente": "Lanie Pidgeley", "fecha_nacimiento_Acudiente": "12/27/1918", "Parentesco": "Asteraceae", "estado": "Plastic", "telefono": "+48 (138) 235-6439", "direccion": "75210 Saint Paul Center", "ciudad_barrio": "Jenna", "beneficiario": "Lanie" },
+                        { "id": 88, "id_Acudiente": 8, "tipo_Documento": "OC", "documento": "8374783826", "nombre_Acudiente": "Cirilo Hainey`", "fecha_nacimiento_Acudiente": "9/3/1989", "Parentesco": "Ericaceae", "estado": "Granite", "telefono": "+63 (936) 968-2729", "direccion": "78535 Mendota Pass", "ciudad_barrio": "Cody", "beneficiario": "Cirilo" },
+                        { "id": 89, "id_Acudiente": 6, "tipo_Documento": "NA", "documento": "2855461731", "nombre_Acudiente": "Bethany Colegrove", "fecha_nacimiento_Acudiente": "11/24/1965", "Parentesco": "Poaceae", "estado": "Stone", "telefono": "+63 (763) 836-6532", "direccion": "146 Dwight Lane", "ciudad_barrio": "Ruskin", "beneficiario": "Bethany" },
+                        { "id": 90, "id_Acudiente": 2, "tipo_Documento": "AS", "documento": "6053609412", "nombre_Acudiente": "Dorelia Ferencz", "fecha_nacimiento_Acudiente": "7/9/2000", "Parentesco": "Agavaceae", "estado": "Plexiglass", "telefono": "+55 (482) 432-9773", "direccion": "0235 Hovde Plaza", "ciudad_barrio": "Sunbrook", "beneficiario": "Dorelia" },
+                        { "id": 91, "id_Acudiente": 1, "tipo_Documento": "NA", "documento": "0469702834", "nombre_Acudiente": "Larry Devers", "fecha_nacimiento_Acudiente": "3/15/1984", "Parentesco": "Saxifragaceae", "estado": "Stone", "telefono": "+1 (960) 650-0240", "direccion": "741 Independence Court", "ciudad_barrio": "Ronald Regan", "beneficiario": "Larry" },
+                        { "id": 92, "id_Acudiente": 9, "tipo_Documento": "AS", "documento": "0315870494", "nombre_Acudiente": "Roxie Freer", "fecha_nacimiento_Acudiente": "4/30/1938", "Parentesco": "Fabaceae", "estado": "Glass", "telefono": "+86 (247) 760-0348", "direccion": "6 Springview Drive", "ciudad_barrio": "Talisman", "beneficiario": "Roxie" },
+                        { "id": 93, "id_Acudiente": 6, "tipo_Documento": "OC", "documento": "8535713263", "nombre_Acudiente": "Casey Camell", "fecha_nacimiento_Acudiente": "11/18/1940", "Parentesco": "Sapotaceae", "estado": "Plexiglass", "telefono": "+856 (466) 811-9278", "direccion": "5 Orin Court", "ciudad_barrio": "Loomis", "beneficiario": "Casey" },
+                        { "id": 94, "id_Acudiente": 6, "tipo_Documento": "OC", "documento": "2832535836", "nombre_Acudiente": "Victor Nafzger", "fecha_nacimiento_Acudiente": "5/13/1976", "Parentesco": "Teloschistaceae", "estado": "Brass", "telefono": "+33 (159) 556-8730", "direccion": "4 Daystar Junction", "ciudad_barrio": "Annamark", "beneficiario": "Victor" },
+                        { "id": 95, "id_Acudiente": 8, "tipo_Documento": "EU", "documento": "8053198597", "nombre_Acudiente": "Constantina Rapin", "fecha_nacimiento_Acudiente": "7/19/2020", "Parentesco": "Verrucariaceae", "estado": "Glass", "telefono": "+420 (482) 469-4596", "direccion": "4 Springview Alley", "ciudad_barrio": "Jackson", "beneficiario": "Constantina" },
+                        { "id": 96, "id_Acudiente": 7, "tipo_Documento": "NA", "documento": "9348950258", "nombre_Acudiente": "Merle Liversedge", "fecha_nacimiento_Acudiente": "4/6/2021", "Parentesco": "Anomodontaceae", "estado": "Brass", "telefono": "+63 (326) 857-5261", "direccion": "47150 Transport Parkway", "ciudad_barrio": "Badeau", "beneficiario": "Merle" },
+                        { "id": 97, "id_Acudiente": 4, "tipo_Documento": "OC", "documento": "4153801054", "nombre_Acudiente": "Dex Dannatt", "fecha_nacimiento_Acudiente": "2/27/1937", "Parentesco": "Ericaceae", "estado": "Plexiglass", "telefono": "+62 (139) 521-6123", "direccion": "61706 Pine View Court", "ciudad_barrio": "Tony", "beneficiario": "Dex" },
+                        { "id": 98, "id_Acudiente": 10, "tipo_Documento": "AF", "documento": "1427374090", "nombre_Acudiente": "Guinna Celier", "fecha_nacimiento_Acudiente": "2/23/1935", "Parentesco": "Fabaceae", "estado": "Plexiglass", "telefono": "+48 (674) 332-4451", "direccion": "4880 Center Street", "ciudad_barrio": "Rutledge", "beneficiario": "Guinna" },
+                        { "id": 99, "id_Acudiente": 4, "tipo_Documento": "AF", "documento": "8325008644", "nombre_Acudiente": "Maribeth Blundel", "fecha_nacimiento_Acudiente": "8/2/1959", "Parentesco": "Parmeliaceae", "estado": "Steel", "telefono": "+1 (800) 468-7996", "direccion": "21 International Center", "ciudad_barrio": "Hooker", "beneficiario": "Maribeth" },
+                        { "id": 100, "id_Acudiente": 2, "tipo_Documento": "OC", "documento": "0450841839", "nombre_Acudiente": "Ardith Heathfield", "fecha_nacimiento_Acudiente": "8/7/1936", "Parentesco": "Fabaceae", "estado": "Plastic", "telefono": "+7 (150) 489-1498", "direccion": "29 Logan Court", "ciudad_barrio": "Forster", "beneficiario": "Ardith" }]
+                        const table = document.getElementById('data-table');
+                        const pagination = document.getElementById('pagination');
+                        const prevPageButton = document.getElementById('prevPage');
+                        const nextPageButton = document.getElementById('nextPage');
+                        const currentPageSpan = document.getElementById('currentPage');
+
+                        let currentPage = 1;
+                        const itemsPerPage = 5; // Cambia esto para ajustar la cantidad de filas por página
+
+                        function showData(page) {
+                            const startIndex = (page - 1) * itemsPerPage;
+                            const endIndex = startIndex + itemsPerPage;
+                            const paginatedData = data.slice(startIndex, endIndex);
+
+                            table.tBodies[0].innerHTML = '';
+
+                            for (const item of paginatedData) {
+                                const row = table.tBodies[0].insertRow();
+                                row.insertCell(0).textContent = item.id;
+                                row.insertCell(1).textContent = item.id_Acudiente;
+                                row.insertCell(2).textContent = item.tipo_Documento;
+                                row.insertCell(3).textContent = item.documento;
+                                row.insertCell(4).textContent = item.nombre_Acudiente;
+                                row.insertCell(5).textContent = item.beneficiario;
+                                row.insertCell(6).textContent = item.telefono;
+                                row.insertCell(7).textContent = item.direccion;
+                                row.insertCell(8).textContent = item.ciudad_barrio;
+
+                                // Crear una nueva celda para las opciones
+                                const opcionesCell = row.insertCell(9);
+                                opcionesCell.className = 'opcion';
+
+                                // Agregar los elementos de opciones dentro de la celda
+                                opcionesCell.innerHTML = `
+          <div class="opcion">
+            <a href=""><img src="../images/eye-svgrepo-com.svg" alt="icon" class="opc_eyes" ></a>          
+            <img src="../images/editar.png" alt="icon" class="opc_edit" >          
+            <img src="../images/borrar.png" alt="icon" class="opc_delete" onclick="mostrarAlerta()" >
+          </div>
+        `;
+                            }
+
+                            currentPage = page;
+                            currentPageSpan.textContent = currentPage;
+                            prevPageButton.disabled = currentPage === 1;
+                            nextPageButton.disabled = currentPage === Math.ceil(data.length / itemsPerPage);
+                        }
+                        prevPageButton.addEventListener('click', () => {
+                            if (currentPage > 1) {
+                                showData(currentPage - 1);
+                            }
+                        });
+
+                        nextPageButton.addEventListener('click', () => {
+                            if (currentPage < Math.ceil(data.length / itemsPerPage)) {
+                                showData(currentPage + 1);
+                            }
+                        });
+
+                        showData(currentPage); // Mostrar la primera página al cargar la página
+
+                        // fin del enpaginado
+                    </script>
+
+                    <!-- /page content -->
+
+                    <!-- footer content -->
+                    <footer>
+                        <div class="pull-right">
+                            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </footer>
+                    <!-- /footer content -->
+                </div>
+            </div>
+
+            <!-- jQuery -->
+            <script src="../vendors/jquery/dist/jquery.min.js"></script>
+            <!-- Bootstrap -->
+            <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- FastClick -->
+            <script src="../vendors/fastclick/lib/fastclick.js"></script>
+            <!-- NProgress -->
+            <script src="../vendors/nprogress/nprogress.js"></script>
+            <!-- Chart.js -->
+            <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+            <!-- jQuery Sparklines -->
+            <script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+            <!-- morris.js -->
+            <script src="../vendors/raphael/raphael.min.js"></script>
+            <script src="../vendors/morris.js/morris.min.js"></script>
+            <!-- gauge.js -->
+            <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+            <!-- bootstrap-progressbar -->
+            <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+            <!-- Skycons -->
+            <script src="../vendors/skycons/skycons.js"></script>
+            <!-- Flot -->
+            <script src="../vendors/Flot/jquery.flot.js"></script>
+            <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+            <script src="../vendors/Flot/jquery.flot.time.js"></script>
+            <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+            <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+            <!-- Flot plugins -->
+            <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+            <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+            <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+            <!-- DateJS -->
+            <script src="../vendors/DateJS/build/date.js"></script>
+            <!-- bootstrap-daterangepicker -->
+            <script src="../vendors/moment/min/moment.min.js"></script>
+            <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+            <!-- Custom Theme Scripts -->
+            <script src="../build/js/custom.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../images/VidaKids-logo.jpg">
+
+  <title>Funavid </title>
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<style>
+  .fotito {
+    border-radius: 50%;
+    width: 50px;
+  }
+</style>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><img src="../images/VidaKids-logo.jpg" alt="" class="fotito">
+              <span>FunaVid</span></a>
+          </div>
+
+
+          <div class="clearfix"></div>
+
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2>Julián</h2>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+
+          <br />
+
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Dashboard <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="index2.html">Dashboard2</a></li>
+                    <li><a href="index3.html">Dashboard3</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-edit"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="form.html">General Form</a></li>
+                    <li><a href="form_advanced.html">Advanced Components</a></li>
+                    <li><a href="form_validation.html">Form Validation</a></li>
+                    <li><a href="form_wizards.html">Form Wizard</a></li>
+                    <li><a href="form_upload.html">Form Upload</a></li>
+                    <li><a href="form_buttons.html">Form Buttons</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-desktop"></i> Servicios <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="categoriaServicios">Categoria de servicios</a></li>
+                    <li><a href="gestionServicios">Gestion de servicios</a></li>
+                    <li><a href="typography.html">Profecionales voluntarios</a></li>
+                    <li><a href="icons.html">Citas</a></li>
+                    <li><a href="glyphicons.html">Eventos virtuales</a></li>
+                    <li><a href="/medicamentos">Medicamentos</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-table"></i> Donaciones <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="/donantes">Donantes</a></li>
+                    <li><a href="/Donaciones/Admin">Donaciones(Admin)</a></li>
+                    <li><a href="/Donaciones/Donante">Donaciones(Donantes)</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-bar-chart-o"></i> Ventas <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="chartjs.html">Chart JS</a></li>
+                    <li><a href="chartjs2.html">Chart JS2</a></li>
+                    <li><a href="morisjs.html">Moris JS</a></li>
+                    <li><a href="echarts.html">ECharts</a></li>
+                    <li><a href="other_charts.html">Other Charts</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-clone"></i> Acudientes <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="/acudientes">Fixed Sidebar</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+
+
+          </div>
+
+          <!-- /sidebar menu -->
+
+
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+          </div>
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+          <nav class="nav navbar-nav">
+            <ul class=" navbar-right">
+              <li class="nav-item dropdown open" style="padding-left: 15px;">
+                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown"
+                  data-toggle="dropdown" aria-expanded="false">
+                  <img src="images/img.jpg" alt="">Julián
+                </a>
+                <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="javascript:;"> Profile</a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <span class="badge bg-red pull-right">50%</span>
+                    <span>Settings</span>
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">Help</a>
+                  <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out pull-right"></i>
+                    Log Out</a>
+                </div>
+              </li>
+
+              <li role="presentation" class="nav-item dropdown open">
+                <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="badge bg-green">6</span>
+                </a>
+                <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                  <li class="nav-item">
+                    <a class="dropdown-item">
+                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span>
+                        <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Film festivals used to be do-or-die moments for movie makers. They were
+                        where...
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dropdown-item">
+                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span>
+                        <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Film festivals used to be do-or-die moments for movie makers. They were
+                        where...
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dropdown-item">
+                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span>
+                        <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Film festivals used to be do-or-die moments for movie makers. They were
+                        where...
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dropdown-item">
+                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span>
+                        <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Film festivals used to be do-or-die moments for movie makers. They were
+                        where...
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="text-center">
+                      <a class="dropdown-item">
+                        <strong>See All Alerts</strong>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+
+      <div class="right_col" role="main">
+        <section>
+          <div class="titulo_p">
+            <h1>Gestion de Acudientes</h1>
+          </div>
+          <div class="titulo_s">
+            <h4>Agregar Acudiente</h4>
+          </div>
+
+          <img src="../images/boton-mas.png" alt="icon" class="icon_add" id="btn-abrir-modal">
+
+        </section>
+        <section class="search_icon">
+          <form class="form-inline my-2 my-lg-0">
+            <div>
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <div class="btn-search">
+              <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><img src="../images/bx-search-alt.svg"
+                  alt=""></button>
+            </div>
+          </form>
+
+        </section>
+        <main>
+          <div class="tabla">
+            <div class="row justify-content-center align-items-center g-2">
+
+              <div class="table-responsive">
+                <table class="table" id="data-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Id</th>
+                      <th scope="col">Acudiente</th>
+                      <th scope="col">Beneficiario</th>
+                      <th scope="col">Tipo de Documento</th>
+                      <th scope="col">Documento</th>
+                      <th scope="col">Telefono</th>
+                      <th scope="col" class="th_center">Opciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+
+                </table>
+                <div class="dow_excel">
+                  <button onclick="exportTableToExcel('data-table')" type="submit"
+                    class="fa fa-download btn btn-success" name="" id="boton ">
+                  </button>
+                  <div class="pagination" id="pagination">
+                    <a id="prevPage">Anterior</a>
+                    <span id="currentPage">
+                      <h6>1</h6>
+                    </span>
+                    <a id="nextPage">Siguiente</a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+      </div>
+
+      </main>
+
+
+    </div>
+
+
+
+    <style>
+      .tabla {
+        display: grid;
+        place-items: center;
+      }
+
+      thead.tabla {
+        font-size: 10px;
+      }
+
+      .th_center {
+        text-align: center;
+      }
+
+      .titulo_p {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .titulo_s {
+        margin-left: 120px;
+        margin-top: 60px
+      }
+
+      .opcion {
+        display: flex;
+        justify-content: space-around;
+
+
+      }
+
+
+      .opc_edit,
+      .opc_delete,
+      .opc_eyes {
+        width: 25px;
+        margin-right: 10px;
+
+      }
+
+      .icon_add {
+        width: 55px;
+        margin-left: 45px;
+        margin-top: -70px;
+      }
+
+      .search_icon {
+        width: 200px;
+        margin-left: 700px;
+        margin-top: -70px;
+        display: flex;
+      }
+
+      .btn-search {
+        margin-left: 220px;
+        margin-top: -38px;
+
+      }
+
+      .form-inline {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .dow_excel {
+          
+
+
+
+      }
+
+
+      h1 {
+        text-align: center;
+      }
+
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+
+      textarea {
+        resize: vertical;
+      }
+
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      .form_g_c {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .boton {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .boton:hover {
+        background-color: #0056b3;
+      }
+
+      .lbl-switch {
+        display: inline-block;
+        width: 55px;
+        height: 30px;
+        background: #e00c0c;
+        border-radius: 100px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      #btn-switch:checked~.lbl-switch {
+        background-color: darkgreen;
+      }
+
+      #btn-switch:checked~.lbl-switch:after {
+        left: 28px;
+      }
+
+      .lbl-switch:after {
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        background: #fff;
+        border-radius: 100px;
+        top: 4px;
+        left: 5px;
+        transition: 0.3s;
+      }
+
+      #btn-switch {
+        display: none;
+      }
+
+      .btn-boton-estado {
+        margin-left: 150px;
+        margin-top: -37px;
+      }
+
+      .pagination {
+        display: flex-start;
+        float: right;
+
+      }
+
+      .pagination span {
+        display: grid;
+        justify-content: center;
+        place-items: center;
+      }
+
+      .pagination a,
+      .pagination button {
+        color: #000000;
+        padding: 8px 16px;
+        cursor: pointer;
+        margin: 2px;
+
+
+      }
+
+      .pagination a:hover,
+      .pagination button:hover {
+        border: 1px solid #f9fcfe;
+
+      }
+
+      #currentPage {
+        font-size: 15px
+      }
+    </style>
+
+
+
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+      <div class="pull-right">
+        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+  </div>
+  </div>
+  <script>
+    function hideshow() {
+      var password = document.getElementById("password1");
+      var slash = document.getElementById("slash");
+      var eye = document.getElementById("eye");
+
+      if (password.type === 'password') {
+        password.type = "text";
+        slash.style.display = "block";
+        eye.style.display = "none";
+      }
+      else {
+        password.type = "password";
+        slash.style.display = "none";
+        eye.style.display = "block";
+      }
+
+    };
+
+    //  Inicio funcion para desscargar
+    function exportTableToExcel(tableID, filename = '') {
+      var downloadLink;
+      var dataType = 'application/vnd.ms-excel';
+      var tableSelect = document.getElementById(tableID);
+
+      // Obtén las filas de la tabla
+      var rows = tableSelect.getElementsByTagName('tr');
+
+      // Crear un objeto HTML para almacenar solo las columnas deseadas
+      var filteredTable = document.createElement('table');
+
+      // Agregar encabezados a la nueva tabla
+      var headerRow = filteredTable.createTHead().insertRow(0);
+      headerRow.innerHTML = "<th>Id</th><th>Id acudiente</th><th>Tipo de documento</th><th>Documento</th><th>Nombre completo</th><th>Beneficiario</th><th>Telefono</th><th>Direccion</th><th>Ciudad-Barrio</th>";
+
+      // Recorrer las filas de la tabla original y copiar solo las columnas deseadas a la nueva tabla
+      for (var i = 0; i < rows.length; i++) {
+        var cells = rows[i].getElementsByTagName('td');
+        if (cells.length >= 5) { // Asegurarse de que haya al menos 5 celdas (las columnas deseadas)
+          var newRow = filteredTable.insertRow(-1);
+          for (var j = 0; j < 5; j++) { // Copiar solo las primeras 5 celdas (las columnas deseadas)
+            var newCell = newRow.insertCell(j);
+            newCell.innerHTML = cells[j].innerHTML;
+          }
+        }
+      }
+
+      // Convertir la nueva tabla a HTML
+      var tableHTML = filteredTable.outerHTML.replace(/ /g, '%20');
+
+      // Especificar el nombre de archivo
+      filename = filename ? filename + '.xls' : 'Listado_Acudientes.xls';
+
+      // Crear el elemento de enlace de descarga
+      downloadLink = document.createElement("a");
+
+      document.body.appendChild(downloadLink);
+
+      if (navigator.msSaveOrOpenBlob) {
+        var blob = new Blob(['ufeff', tableHTML], {
+          type: dataType
+        });
+        navigator.msSaveOrOpenBlob(blob, filename);
+      } else {
+        // Crear un enlace al archivo
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+        // Establecer el nombre de archivo
+        downloadLink.download = filename;
+
+        // Activar la función
+        downloadLink.click();
+      }
+    }
+    // Fin de funcion de descarga
+
+    // inicio de en paginado
+    const data = [{
+      "id": 1,
+      "nombre_Acudiente": "Jessi Marke",
+      "beneficiario": "Dolly Wadly",
+      "tipo_Documento": "PKV",
+      "documento": "7474696746",
+      "telefono": "+92 615 213 6685"
+    }, {
+      "id": 2,
+      "nombre_Acudiente": "Evaleen Sherlock",
+      "beneficiario": "Winnah Oswick",
+      "tipo_Documento": "NZE",
+      "documento": "7526576304",
+      "telefono": "+52 647 374 9381"
+    }, {
+      "id": 3,
+      "nombre_Acudiente": "Cristie Haeslier",
+      "beneficiario": "Brinn Hackey",
+      "tipo_Documento": "ILK",
+      "documento": "6971551877",
+      "telefono": "+60 420 100 4411"
+    }, {
+      "id": 4,
+      "nombre_Acudiente": "Elvyn Ettles",
+      "beneficiario": "Petra Glazyer",
+      "tipo_Documento": "DBU",
+      "documento": "3540961798",
+      "telefono": "+81 769 965 0154"
+    }, {
+      "id": 5,
+      "nombre_Acudiente": "Adan Twyning",
+      "beneficiario": "Rafi Warden",
+      "tipo_Documento": "RRL",
+      "documento": "5817662671",
+      "telefono": "+7 374 962 6117"
+    }, {
+      "id": 6,
+      "nombre_Acudiente": "Meg McCourt",
+      "beneficiario": "Garey Patley",
+      "tipo_Documento": "XSC",
+      "documento": "3573592805",
+      "telefono": "+1 367 568 7836"
+    }, {
+      "id": 7,
+      "nombre_Acudiente": "Nicolina Hambrick",
+      "beneficiario": "Saxe M'Chirrie",
+      "tipo_Documento": "KPE",
+      "documento": "0116300515",
+      "telefono": "+595 867 861 8326"
+    }, {
+      "id": 8,
+      "nombre_Acudiente": "Keefer Terbeek",
+      "beneficiario": "Billy Waugh",
+      "tipo_Documento": "WFI",
+      "documento": "6146871184",
+      "telefono": "+46 546 760 6331"
+    }, {
+      "id": 9,
+      "nombre_Acudiente": "Frank Ruddle",
+      "beneficiario": "Elinor Peploe",
+      "tipo_Documento": "DSS",
+      "documento": "4211550322",
+      "telefono": "+63 713 626 7817"
+    }, {
+      "id": 10,
+      "nombre_Acudiente": "Torre Addie",
+      "beneficiario": "Gratia Spridgen",
+      "tipo_Documento": "TEQ",
+      "documento": "4257354755",
+      "telefono": "+48 926 119 2078"
+    }, {
+      "id": 11,
+      "nombre_Acudiente": "Ravid Thaim",
+      "beneficiario": "Daphna Nuss",
+      "tipo_Documento": "GUL",
+      "documento": "8947761451",
+      "telefono": "+95 705 731 7944"
+    }, {
+      "id": 12,
+      "nombre_Acudiente": "Nicolas Cottem",
+      "beneficiario": "Layney Monketon",
+      "tipo_Documento": "CCM",
+      "documento": "6424202005",
+      "telefono": "+53 258 662 9665"
+    }, {
+      "id": 13,
+      "nombre_Acudiente": "Emlyn Duffitt",
+      "beneficiario": "Chariot Eades",
+      "tipo_Documento": "EGS",
+      "documento": "9855825004",
+      "telefono": "+7 170 818 0080"
+    }, {
+      "id": 14,
+      "nombre_Acudiente": "Timoteo Henrot",
+      "beneficiario": "Bonni Coolbear",
+      "tipo_Documento": "MDF",
+      "documento": "6852326543",
+      "telefono": "+63 392 545 1101"
+    }, {
+      "id": 15,
+      "nombre_Acudiente": "Darren Gwilliam",
+      "beneficiario": "Reamonn Suart",
+      "tipo_Documento": "CZL",
+      "documento": "6312855546",
+      "telefono": "+86 210 403 3601"
+    }, {
+      "id": 16,
+      "nombre_Acudiente": "Sheeree Danshin",
+      "beneficiario": "Lawry Javes",
+      "tipo_Documento": "MDR",
+      "documento": "6658122199",
+      "telefono": "+39 600 611 7450"
+    }, {
+      "id": 17,
+      "nombre_Acudiente": "Lewiss Vasile",
+      "beneficiario": "Lisabeth Weatherill",
+      "tipo_Documento": "GRL",
+      "documento": "6685860286",
+      "telefono": "+255 310 966 4222"
+    }, {
+      "id": 18,
+      "nombre_Acudiente": "Florian Belward",
+      "beneficiario": "Ronald Calverley",
+      "tipo_Documento": "SJT",
+      "documento": "6141953050",
+      "telefono": "+86 495 391 2684"
+    }, {
+      "id": 19,
+      "nombre_Acudiente": "Anette McQuirk",
+      "beneficiario": "Danica Darton",
+      "tipo_Documento": "OSD",
+      "documento": "5178316797",
+      "telefono": "+62 832 334 3680"
+    }, {
+      "id": 20,
+      "nombre_Acudiente": "Robbie Nelane",
+      "beneficiario": "Marijn Haines",
+      "tipo_Documento": "HWA",
+      "documento": "3585520545",
+      "telefono": "+86 112 977 7012"
+    }, {
+      "id": 21,
+      "nombre_Acudiente": "Sven Hugk",
+      "beneficiario": "Rochester Orknay",
+      "tipo_Documento": "STD",
+      "documento": "5374904647",
+      "telefono": "+55 713 449 6465"
+    }, {
+      "id": 22,
+      "nombre_Acudiente": "Lelah Taye",
+      "beneficiario": "Rockwell Penk",
+      "tipo_Documento": "MDB",
+      "documento": "4952245179",
+      "telefono": "+351 885 272 1832"
+    }, {
+      "id": 23,
+      "nombre_Acudiente": "Rob Gomez",
+      "beneficiario": "Gavrielle Mandres",
+      "tipo_Documento": "UEN",
+      "documento": "3486009850",
+      "telefono": "+46 782 500 4576"
+    }, {
+      "id": 24,
+      "nombre_Acudiente": "Solomon Camus",
+      "beneficiario": "Rufus Mott",
+      "tipo_Documento": "GNU",
+      "documento": "3268470254",
+      "telefono": "+58 781 474 7440"
+    }, {
+      "id": 25,
+      "nombre_Acudiente": "Ronica Bantham",
+      "beneficiario": "Mariellen Westney",
+      "tipo_Documento": "NUL",
+      "documento": "5042839879",
+      "telefono": "+7 990 514 5786"
+    }, {
+      "id": 26,
+      "nombre_Acudiente": "Keelby Cella",
+      "beneficiario": "Cchaddie Ching",
+      "tipo_Documento": "MXD",
+      "documento": "2121558772",
+      "telefono": "+62 574 772 7658"
+    }, {
+      "id": 27,
+      "nombre_Acudiente": "Lev Marchment",
+      "beneficiario": "Cortie Greenhalf",
+      "tipo_Documento": "DPG",
+      "documento": "5112195339",
+      "telefono": "+7 572 268 2225"
+    }, {
+      "id": 28,
+      "nombre_Acudiente": "Jerry Matas",
+      "beneficiario": "Mollee Guidoni",
+      "tipo_Documento": "TIF",
+      "documento": "3029540707",
+      "telefono": "+993 936 481 0157"
+    }, {
+      "id": 29,
+      "nombre_Acudiente": "Birdie Jakobsson",
+      "beneficiario": "Mirelle Surgood",
+      "tipo_Documento": "SDJ",
+      "documento": "3392869309",
+      "telefono": "+503 647 709 4245"
+    }, {
+      "id": 30,
+      "nombre_Acudiente": "Corliss Jedrzejewski",
+      "beneficiario": "Thomasine Delete",
+      "tipo_Documento": "KEY",
+      "documento": "0957549474",
+      "telefono": "+7 990 387 2857"
+    }, {
+      "id": 31,
+      "nombre_Acudiente": "Siusan Beri",
+      "beneficiario": "Caldwell Hazeltine",
+      "tipo_Documento": "GBH",
+      "documento": "1501900730",
+      "telefono": "+961 402 265 8792"
+    }, {
+      "id": 32,
+      "nombre_Acudiente": "Belicia Gosnoll",
+      "beneficiario": "Mandel Robinette",
+      "tipo_Documento": "DUG",
+      "documento": "6527667795",
+      "telefono": "+352 747 242 7696"
+    }, {
+      "id": 33,
+      "nombre_Acudiente": "Emmeline Philipard",
+      "beneficiario": "Reed Sabban",
+      "tipo_Documento": "RVT",
+      "documento": "9174580418",
+      "telefono": "+30 575 482 7696"
+    }, {
+      "id": 34,
+      "nombre_Acudiente": "Seth Brawley",
+      "beneficiario": "Lissie Bradnick",
+      "tipo_Documento": "ARU",
+      "documento": "8205137935",
+      "telefono": "+63 291 744 8624"
+    }, {
+      "id": 35,
+      "nombre_Acudiente": "Terrye Lakes",
+      "beneficiario": "Marti Ahmed",
+      "tipo_Documento": "KTQ",
+      "documento": "1619942496",
+      "telefono": "+255 276 441 3758"
+    }, {
+      "id": 36,
+      "nombre_Acudiente": "Ettore Hedgeman",
+      "beneficiario": "Estella Roser",
+      "tipo_Documento": "SUR",
+      "documento": "7601619362",
+      "telefono": "+351 613 647 0047"
+    }, {
+      "id": 37,
+      "nombre_Acudiente": "Danika Bickerdicke",
+      "beneficiario": "Pieter Lister",
+      "tipo_Documento": "YZU",
+      "documento": "9441603155",
+      "telefono": "+81 998 130 6308"
+    }, {
+      "id": 38,
+      "nombre_Acudiente": "Jaquelyn Rohlfing",
+      "beneficiario": "Falito Prattington",
+      "tipo_Documento": "ZDY",
+      "documento": "6503948611",
+      "telefono": "+299 342 561 7160"
+    }, {
+      "id": 39,
+      "nombre_Acudiente": "Donica Apps",
+      "beneficiario": "Enrica Brogini",
+      "tipo_Documento": "CUU",
+      "documento": "3223999426",
+      "telefono": "+55 252 318 6457"
+    }, {
+      "id": 40,
+      "nombre_Acudiente": "Carlina Sarch",
+      "beneficiario": "Wenda Winton",
+      "tipo_Documento": "ZGL",
+      "documento": "6245954908",
+      "telefono": "+46 577 134 7491"
+    }, {
+      "id": 41,
+      "nombre_Acudiente": "Debby Gamett",
+      "beneficiario": "Vinson Cheetham",
+      "tipo_Documento": "YGE",
+      "documento": "0174013353",
+      "telefono": "+234 522 815 7310"
+    }, {
+      "id": 42,
+      "nombre_Acudiente": "Steve Neary",
+      "beneficiario": "Dugald Gillson",
+      "tipo_Documento": "KME",
+      "documento": "7533053249",
+      "telefono": "+237 456 295 0922"
+    }, {
+      "id": 43,
+      "nombre_Acudiente": "Izaak Pascho",
+      "beneficiario": "Guthrey Gainsborough",
+      "tipo_Documento": "ORL",
+      "documento": "7028821668",
+      "telefono": "+963 530 871 5216"
+    }, {
+      "id": 44,
+      "nombre_Acudiente": "Pepe Yarranton",
+      "beneficiario": "Dulcia Chipchase",
+      "tipo_Documento": "ADR",
+      "documento": "5506242506",
+      "telefono": "+216 650 534 9399"
+    }, {
+      "id": 45,
+      "nombre_Acudiente": "Rebe Cheers",
+      "beneficiario": "Barbette Cockson",
+      "tipo_Documento": "YMN",
+      "documento": "6808119112",
+      "telefono": "+48 832 440 6325"
+    }, {
+      "id": 46,
+      "nombre_Acudiente": "Bernetta Haizelden",
+      "beneficiario": "Netty Markwelley",
+      "tipo_Documento": "PYA",
+      "documento": "1794609547",
+      "telefono": "+86 721 165 6057"
+    }, {
+      "id": 47,
+      "nombre_Acudiente": "Martie Labba",
+      "beneficiario": "Putnam McMurty",
+      "tipo_Documento": "ARM",
+      "documento": "3120541354",
+      "telefono": "+60 735 796 4130"
+    }, {
+      "id": 48,
+      "nombre_Acudiente": "Glori Hugli",
+      "beneficiario": "Winfield Keppe",
+      "tipo_Documento": "AXE",
+      "documento": "2736810198",
+      "telefono": "+62 808 899 4176"
+    }, {
+      "id": 49,
+      "nombre_Acudiente": "Ashby Waylett",
+      "beneficiario": "Bethina Creffield",
+      "tipo_Documento": "KOP",
+      "documento": "2347112260",
+      "telefono": "+7 972 300 1667"
+    }, {
+      "id": 50,
+      "nombre_Acudiente": "Tresa Fitzer",
+      "beneficiario": "Tiffany Infante",
+      "tipo_Documento": "RNJ",
+      "documento": "1972345826",
+      "telefono": "+1 727 926 8246"
+    }, {
+      "id": 51,
+      "nombre_Acudiente": "Aimee Kuhndel",
+      "beneficiario": "Shawnee Gregoretti",
+      "tipo_Documento": "JAN",
+      "documento": "7552863064",
+      "telefono": "+356 588 628 3076"
+    }, {
+      "id": 52,
+      "nombre_Acudiente": "Josi Foord",
+      "beneficiario": "Sibilla Giovannoni",
+      "tipo_Documento": "YLG",
+      "documento": "2974237835",
+      "telefono": "+351 713 600 0459"
+    }, {
+      "id": 53,
+      "nombre_Acudiente": "Madeleine Theml",
+      "beneficiario": "Sibelle Conigsby",
+      "tipo_Documento": "VIG",
+      "documento": "2853767930",
+      "telefono": "+33 888 216 8962"
+    }, {
+      "id": 54,
+      "nombre_Acudiente": "Irvine Phetteplace",
+      "beneficiario": "Maxy Kidgell",
+      "tipo_Documento": "OKG",
+      "documento": "1114129186",
+      "telefono": "+505 612 956 2299"
+    }, {
+      "id": 55,
+      "nombre_Acudiente": "Alexia Bellini",
+      "beneficiario": "Maryanna Summerbell",
+      "tipo_Documento": "PGB",
+      "documento": "1550467565",
+      "telefono": "+86 709 293 4285"
+    }, {
+      "id": 56,
+      "nombre_Acudiente": "Chuck Crosi",
+      "beneficiario": "Shanie Bunn",
+      "tipo_Documento": "QOJ",
+      "documento": "8893680033",
+      "telefono": "+502 151 442 7647"
+    }, {
+      "id": 57,
+      "nombre_Acudiente": "Blondie Ettritch",
+      "beneficiario": "Noll Algeo",
+      "tipo_Documento": "KZR",
+      "documento": "5588889975",
+      "telefono": "+1 299 328 5907"
+    }, {
+      "id": 58,
+      "nombre_Acudiente": "Bertine Titterell",
+      "beneficiario": "Silvia Labell",
+      "tipo_Documento": "MLP",
+      "documento": "0330512919",
+      "telefono": "+387 250 918 9869"
+    }, {
+      "id": 59,
+      "nombre_Acudiente": "Stephani Schistl",
+      "beneficiario": "Tommy Merrywether",
+      "tipo_Documento": "LDI",
+      "documento": "8559434631",
+      "telefono": "+256 508 823 0417"
+    }, {
+      "id": 60,
+      "nombre_Acudiente": "Franky Niblock",
+      "beneficiario": "Viva Sartin",
+      "tipo_Documento": "MLX",
+      "documento": "0815277555",
+      "telefono": "+7 705 530 0801"
+    }, {
+      "id": 61,
+      "nombre_Acudiente": "Leeanne Maly",
+      "beneficiario": "Mercedes Torns",
+      "tipo_Documento": "ATD",
+      "documento": "8670133822",
+      "telefono": "+86 932 301 7971"
+    }, {
+      "id": 62,
+      "nombre_Acudiente": "Klaus Steet",
+      "beneficiario": "Eberhard Grisard",
+      "tipo_Documento": "LCE",
+      "documento": "2421819849",
+      "telefono": "+30 162 522 2034"
+    }, {
+      "id": 63,
+      "nombre_Acudiente": "Leilah Franc",
+      "beneficiario": "Mattheus Ovitts",
+      "tipo_Documento": "FMS",
+      "documento": "7711971974",
+      "telefono": "+63 225 464 8299"
+    }, {
+      "id": 64,
+      "nombre_Acudiente": "Devin Phillp",
+      "beneficiario": "Lucas Carabine",
+      "tipo_Documento": "ELB",
+      "documento": "4831139718",
+      "telefono": "+675 392 429 9591"
+    }, {
+      "id": 65,
+      "nombre_Acudiente": "Gabriello Beernt",
+      "beneficiario": "Carolyn Tigner",
+      "tipo_Documento": "DSI",
+      "documento": "1569748136",
+      "telefono": "+55 406 409 8521"
+    }, {
+      "id": 66,
+      "nombre_Acudiente": "Erny Struther",
+      "beneficiario": "Vaughan Cobbe",
+      "tipo_Documento": "SQV",
+      "documento": "6704447407",
+      "telefono": "+55 234 100 3306"
+    }, {
+      "id": 67,
+      "nombre_Acudiente": "Guglielma Auden",
+      "beneficiario": "Farleigh Hawlgarth",
+      "tipo_Documento": "NBH",
+      "documento": "6745692228",
+      "telefono": "+86 744 600 5901"
+    }, {
+      "id": 68,
+      "nombre_Acudiente": "Nat Duplan",
+      "beneficiario": "Olvan Possell",
+      "tipo_Documento": "BUT",
+      "documento": "2752336489",
+      "telefono": "+86 230 441 4791"
+    }, {
+      "id": 69,
+      "nombre_Acudiente": "Marlyn Hamshere",
+      "beneficiario": "Chrystal Extil",
+      "tipo_Documento": "TIL",
+      "documento": "5084049159",
+      "telefono": "+86 954 283 7445"
+    }, {
+      "id": 70,
+      "nombre_Acudiente": "Cal Merioth",
+      "beneficiario": "Prent McDougald",
+      "tipo_Documento": "KOZ",
+      "documento": "8042728107",
+      "telefono": "+7 452 524 7623"
+    }, {
+      "id": 71,
+      "nombre_Acudiente": "Cristal Ferronel",
+      "beneficiario": "Jakie Hammonds",
+      "tipo_Documento": "SKX",
+      "documento": "8519088066",
+      "telefono": "+63 922 413 7943"
+    }, {
+      "id": 72,
+      "nombre_Acudiente": "Adrianne O'Geaney",
+      "beneficiario": "Giraldo Pavis",
+      "tipo_Documento": "WTS",
+      "documento": "0030748429",
+      "telefono": "+232 370 498 1125"
+    }, {
+      "id": 73,
+      "nombre_Acudiente": "Elladine Symons",
+      "beneficiario": "Shaylah Bouldon",
+      "tipo_Documento": "WTR",
+      "documento": "2180884338",
+      "telefono": "+86 461 583 9538"
+    }, {
+      "id": 74,
+      "nombre_Acudiente": "Immanuel Chilles",
+      "beneficiario": "Blakelee Locket",
+      "tipo_Documento": "YYM",
+      "documento": "4655688750",
+      "telefono": "+82 876 596 9986"
+    }, {
+      "id": 75,
+      "nombre_Acudiente": "Cheryl Troni",
+      "beneficiario": "Hernando Baseke",
+      "tipo_Documento": "LKG",
+      "documento": "9286525990",
+      "telefono": "+57 926 898 0096"
+    }, {
+      "id": 76,
+      "nombre_Acudiente": "Devland Bascomb",
+      "beneficiario": "Ambrosi Allward",
+      "tipo_Documento": "DOM",
+      "documento": "8465787638",
+      "telefono": "+267 330 502 2704"
+    }, {
+      "id": 77,
+      "nombre_Acudiente": "Jefferey Gratland",
+      "beneficiario": "Scotty Larkings",
+      "tipo_Documento": "HLT",
+      "documento": "3987002425",
+      "telefono": "+7 562 917 2438"
+    }, {
+      "id": 78,
+      "nombre_Acudiente": "Bil Murdoch",
+      "beneficiario": "Philip Edinborough",
+      "tipo_Documento": "YYJ",
+      "documento": "4441553412",
+      "telefono": "+51 617 221 1088"
+    }, {
+      "id": 79,
+      "nombre_Acudiente": "Birgitta Niezen",
+      "beneficiario": "Vitoria Treffrey",
+      "tipo_Documento": "KPE",
+      "documento": "0502381698",
+      "telefono": "+62 809 705 8514"
+    }, {
+      "id": 80,
+      "nombre_Acudiente": "Austina Mustarde",
+      "beneficiario": "Maryl Cawthry",
+      "tipo_Documento": "VXC",
+      "documento": "5423890314",
+      "telefono": "+507 987 339 1136"
+    }, {
+      "id": 81,
+      "nombre_Acudiente": "Carmine Streeter",
+      "beneficiario": "Mela Lissandri",
+      "tipo_Documento": "ROW",
+      "documento": "1851144773",
+      "telefono": "+62 568 873 7120"
+    }, {
+      "id": 82,
+      "nombre_Acudiente": "Howard Runacres",
+      "beneficiario": "Emmerich Meacher",
+      "tipo_Documento": "KLG",
+      "documento": "1852498269",
+      "telefono": "+1 215 746 3587"
+    }, {
+      "id": 83,
+      "nombre_Acudiente": "Emelda Baudouin",
+      "beneficiario": "Marcela Petruskevich",
+      "tipo_Documento": "ZTM",
+      "documento": "3321132877",
+      "telefono": "+54 583 708 2096"
+    }, {
+      "id": 84,
+      "nombre_Acudiente": "Romain Hearsey",
+      "beneficiario": "Sioux Baldrick",
+      "tipo_Documento": "YIW",
+      "documento": "1967442622",
+      "telefono": "+595 619 225 7969"
+    }, {
+      "id": 85,
+      "nombre_Acudiente": "Trista Zincke",
+      "beneficiario": "Pernell Coghlin",
+      "tipo_Documento": "QRF",
+      "documento": "1250125219",
+      "telefono": "+82 714 971 3500"
+    }, {
+      "id": 86,
+      "nombre_Acudiente": "Cleo Verdy",
+      "beneficiario": "Appolonia Aldin",
+      "tipo_Documento": "NAH",
+      "documento": "4775754742",
+      "telefono": "+62 922 280 1324"
+    }, {
+      "id": 87,
+      "nombre_Acudiente": "Leonard Compson",
+      "beneficiario": "Lynnelle Bulfield",
+      "tipo_Documento": "YVR",
+      "documento": "3267307392",
+      "telefono": "+93 410 584 4478"
+    }, {
+      "id": 88,
+      "nombre_Acudiente": "Lock Edsell",
+      "beneficiario": "Linoel Folger",
+      "tipo_Documento": "SBW",
+      "documento": "7554991582",
+      "telefono": "+81 378 736 2865"
+    }, {
+      "id": 89,
+      "nombre_Acudiente": "Edmon Pisco",
+      "beneficiario": "Goran Haseldine",
+      "tipo_Documento": "GSR",
+      "documento": "4295371033",
+      "telefono": "+62 626 778 3698"
+    }, {
+      "id": 90,
+      "nombre_Acudiente": "Hetty Bauer",
+      "beneficiario": "Billie Lamp",
+      "tipo_Documento": "SDR",
+      "documento": "9449350604",
+      "telefono": "+66 756 543 5121"
+    }, {
+      "id": 91,
+      "nombre_Acudiente": "Salomone Swainson",
+      "beneficiario": "Fifine Bittleson",
+      "tipo_Documento": "KYO",
+      "documento": "8883766504",
+      "telefono": "+52 434 160 0558"
+    }, {
+      "id": 92,
+      "nombre_Acudiente": "Aldric Statefield",
+      "beneficiario": "Helaine Dixie",
+      "tipo_Documento": "ITA",
+      "documento": "3373813026",
+      "telefono": "+387 399 237 8541"
+    }, {
+      "id": 93,
+      "nombre_Acudiente": "Mayne Stuckey",
+      "beneficiario": "Tanhya Schriren",
+      "tipo_Documento": "KLI",
+      "documento": "4052393236",
+      "telefono": "+53 229 162 7809"
+    }, {
+      "id": 94,
+      "nombre_Acudiente": "Ichabod Bodicum",
+      "beneficiario": "Felicle Gaudin",
+      "tipo_Documento": "MJG",
+      "documento": "6847829516",
+      "telefono": "+1 584 176 2838"
+    }, {
+      "id": 95,
+      "nombre_Acudiente": "Winthrop Theis",
+      "beneficiario": "Brewer Jouanet",
+      "tipo_Documento": "TMZ",
+      "documento": "2457957869",
+      "telefono": "+54 934 250 6167"
+    }, {
+      "id": 96,
+      "nombre_Acudiente": "Palmer Cicccitti",
+      "beneficiario": "Ikey Windus",
+      "tipo_Documento": "VRI",
+      "documento": "9976834187",
+      "telefono": "+27 725 433 3787"
+    }, {
+      "id": 97,
+      "nombre_Acudiente": "Arny Elsy",
+      "beneficiario": "Duff Stanyland",
+      "tipo_Documento": "MUR",
+      "documento": "4943450458",
+      "telefono": "+1 770 602 0083"
+    }, {
+      "id": 98,
+      "nombre_Acudiente": "Marin Kearton",
+      "beneficiario": "Jammie Apedaile",
+      "tipo_Documento": "TTS",
+      "documento": "4372495692",
+      "telefono": "+62 602 867 4455"
+    }, {
+      "id": 99,
+      "nombre_Acudiente": "Erasmus Sevitt",
+      "beneficiario": "Kalinda Tuffin",
+      "tipo_Documento": "GBF",
+      "documento": "7376203184",
+      "telefono": "+380 830 775 6404"
+    }, {
+      "id": 100,
+      "nombre_Acudiente": "Florella Humpatch",
+      "beneficiario": "Rutherford Kinnard",
+      "tipo_Documento": "LZR",
+      "documento": "5960324687",
+      "telefono": "+62 214 312 3188"
+    }];
+
+    const table = document.getElementById('data-table');
+    const pagination = document.getElementById('pagination');
+    const prevPageButton = document.getElementById('prevPage');
+    const nextPageButton = document.getElementById('nextPage');
+    const currentPageSpan = document.getElementById('currentPage');
+
+    let currentPage = 1;
+    const itemsPerPage = 5; // Cambia esto para ajustar la cantidad de filas por página
+
+    function showData(page) {
+      const startIndex = (page - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      const paginatedData = data.slice(startIndex, endIndex);
+
+      table.tBodies[0].innerHTML = '';
+
+      for (const item of paginatedData) {
+        const row = table.tBodies[0].insertRow();
+        row.insertCell(0).textContent = item.id;
+        row.insertCell(1).textContent = item.nombre_Acudiente;
+        row.insertCell(2).textContent = item.beneficiario;
+        row.insertCell(3).textContent = item.tipo_Documento;
+        row.insertCell(4).textContent = item.documento;
+        row.insertCell(5).textContent = item.telefono;
+
+        // Crear una nueva celda para las opciones
+        const opcionesCell = row.insertCell(6);
+        opcionesCell.className = 'opcion';
+
+        // Agregar los elementos de opciones dentro de la celda
+        opcionesCell.innerHTML = `
+          <div class="opcion">
+            <a href=""><img src="../images/eye-svgrepo-com.svg" alt="icon" class="opc_eyes" ></a>          
+            <img src="../images/editar.png" alt="icon" class="opc_edit" >          
+            <img src="../images/borrar.png" alt="icon" class="opc_delete" onclick="mostrarAlerta()" >
+          </div>
+        `;
+      }
+
+      currentPage = page;
+      currentPageSpan.textContent = currentPage;
+      prevPageButton.disabled = currentPage === 1;
+      nextPageButton.disabled = currentPage === Math.ceil(data.length / itemsPerPage);
+    }
+    prevPageButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        showData(currentPage - 1);
+      }
+    });
+
+    nextPageButton.addEventListener('click', () => {
+      if (currentPage < Math.ceil(data.length / itemsPerPage)) {
+        showData(currentPage + 1);
+      }
+    });
+
+    showData(currentPage); // Mostrar la primera página al cargar la página
+
+    // fin del enpaginado
+  </script>
+  <!-- jQuery -->
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- FastClick -->
+  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="../vendors/nprogress/nprogress.js"></script>
+  <!-- Chart.js -->
+  <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+  <!-- jQuery Sparklines -->
+  <script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+  <!-- morris.js -->
+  <script src="../vendors/raphael/raphael.min.js"></script>
+  <script src="../vendors/morris.js/morris.min.js"></script>
+  <!-- gauge.js -->
+  <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+  <!-- bootstrap-progressbar -->
+  <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+  <!-- Skycons -->
+  <script src="../vendors/skycons/skycons.js"></script>
+  <!-- Flot -->
+  <script src="../vendors/Flot/jquery.flot.js"></script>
+  <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+  <script src="../vendors/Flot/jquery.flot.time.js"></script>
+  <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+  <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+  <!-- Flot plugins -->
+  <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+  <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+  <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+  <!-- DateJS -->
+  <script src="../vendors/DateJS/build/date.js"></script>
+  <!-- bootstrap-daterangepicker -->
+  <script src="../vendors/moment/min/moment.min.js"></script>
+  <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
+
+</body>
+
+</html>
