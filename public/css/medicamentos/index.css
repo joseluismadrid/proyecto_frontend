@@ -1,0 +1,220 @@
+.tabla {
+      display: grid;
+      place-items: center;
+
+    }
+
+    thead.tabla {
+      font-size: 10px;
+    }
+
+    .th_center {
+      text-align: center;
+    }
+
+    .titulo_p {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .titulo_s {
+      margin-left: 120px;
+      margin-top: 60px
+    }
+
+    .opcion {
+      display: flex;
+      justify-content: space-around;
+
+
+    }
+
+
+    .opc_edit,
+    .opc_delete,
+    .opc_eyes {
+      width: 25px;
+      margin-right: 10px;
+
+    }
+   
+
+    .icon_add {
+      width: 30px;
+      margin-left: 45px;
+      margin-top: -70px;
+    }
+
+    .search_icon {
+      width: 200px;
+      margin-left: 620px;
+      margin-top: -70px;
+      display: flex;
+    }
+
+    .btn-search {
+      margin-left: 220px;
+      margin-top: -38px;
+
+    }
+
+    .form-inline {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .fotito {
+    border-radius: 50%;
+    width: 50px;
+  }
+
+
+
+    h1 {
+      text-align: center;
+    }
+
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+
+    textarea {
+      resize: vertical;
+    }
+
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .form_g_c {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .boton {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .boton:hover {
+      background-color: #0056b3;
+    }
+
+    .lbl-switch {
+      display: inline-block;
+      width: 55px;
+      height: 30px;
+      background: #e00c0c;
+      border-radius: 100px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    #btn-switch:checked~.lbl-switch {
+      background-color: darkgreen;
+    }
+
+    #btn-switch:checked~.lbl-switch:after {
+      left: 28px;
+    }
+
+    .lbl-switch:after {
+      position: absolute;
+      content: '';
+      width: 22px;
+      height: 22px;
+      background: #fff;
+      border-radius: 100px;
+      top: 4px;
+      left: 5px;
+      transition: 0.3s;
+    }
+
+    #btn-switch {
+      display: none;
+    }
+
+    .btn-boton-estado {
+      margin-left: 150px;
+      margin-top: -37px;
+    }
+
+    .pagination {
+      display: flex-start;
+      float: right;
+
+    }
+
+    .pagination span {
+      display: grid;
+      justify-content: center;
+      place-items: center;
+    }
+
+    .pagination a,
+    .pagination button,
+    span {
+      color: #000000;
+      padding: 8px 16px;
+      cursor: pointer;
+      margin: 2px;
+
+
+    }
+
+    .pagination a:hover,
+    .pagination button:hover {
+      border: 1px solid #f9fcfe;
+
+    }
+
+    #currentPage {
+      font-size: 15px
+    }

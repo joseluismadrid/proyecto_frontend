@@ -37,7 +37,9 @@ app.get('/login', (req, res) => {
 app.get('/Donaciones/Admin', (req, res) => {
     res.render('indexDonaciones(Admin).hbs')
 })
-
+app.get('/registrarAcudiente', (req, res) => {
+    res.render('registrarAcudiente.hbs')
+})
 app.get('/Donaciones/Donante', (req, res) => {
     res.render('indexDonaciones(Donante).hbs')
 })
@@ -49,6 +51,12 @@ app.get("/donantes", (req, res) => {
 app.get("/medicamentos", (req, res) => {
     res.render("indexMedicamentos.hbs");
 });
+app.get('/registrarmediamento', (req, res) => {
+    res.render('registrarmediamento.hbs')
+})
+app.get('/editarAcudiente', (req, res) => {
+    res.render('editarAcudiente.hbs')
+})
 
 app.get("/acudientes", (req, res) => {
     res.render("indexAcudientes.hbs");
