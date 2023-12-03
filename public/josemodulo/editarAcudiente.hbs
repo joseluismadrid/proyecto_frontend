@@ -1,5 +1,5 @@
 {{>header}}
- <link rel="stylesheet" href="../css/acudientes/registra.css">
+<link rel="stylesheet" href="../css/acudientes/editar.css">
 {{>head}}
 <div class="right_col" role="main">
     <div class="prueba">
@@ -14,7 +14,7 @@
 
                         <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="beneficiario" id="beneficiario"
-                                placeholder="Nombre Completo">
+                                placeholder="Nombre Completo" disabled="">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
                         <p class="formulario__input-error">El campo no puede contener numeros</p>
@@ -25,7 +25,7 @@
                     <div class="formulario__grupo" id="grupo__tipodocumento">
                         <label for="tipo" class="formulario__label">Tipo De Documento</label>
                         <div class="formulario__grupo-input">
-                            <select id="tipo" name="tipo">
+                            <select id="tipo" name="tipo" disabled="">
                                 <option value="">Selecciona Tipo De documento</option>
                                 <option value="nit">NIT</option>
                                 <option value="cc">CC</option>
@@ -48,7 +48,7 @@
                             Nacimiento</label>
                         <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="fechaNacimiento" id="fechaNacimiento"
-                                placeholder="dd/mm/yy">
+                                placeholder="dd/mm/yy" disabled="">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
                         <p class="formulario__input-error">El campo targeta de identidad no puede
@@ -69,7 +69,7 @@
                         <label for="Acudiente" class="formulario__label">Acudiente</label>
                         <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="Acudiente" id="Acudiente"
-                                placeholder="Nombre Completo">
+                                placeholder="Nombre Completo" disabled="">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
                         <p class="formulario__input-error">El nombre del Acudiente no puede contener
@@ -80,7 +80,7 @@
                         <label for="documento" class="formulario__label">Documento</label>
                         <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="documento" id="documento"
-                                placeholder="0000000000">
+                                placeholder="0000000000" disabled="">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
                         <p class="formulario__input-error">El campo no puede contener letras.</p>
@@ -90,7 +90,7 @@
                         <label for="parentesco" class="formulario__label">Parentesco </label>
                         <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" name="parentesco" id="parentesco"
-                                placeholder="Abuelo">
+                                placeholder="Abuelo" disabled="">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
                         <p class="formulario__input-error">El campo no puede contener numeros.</p>
@@ -107,7 +107,7 @@
                         <div class="formulario__grupo" id="grupo__estado">
                             <label for="estado" class="formulario__label">Estado</label>
                             <div class="formulario__grupo-input">
-                                <select id="estado" name="estado">
+                                <select id="estado" name="estado" disabled="">
                                     <option value="">Selecciona un estado</option>
                                     <option value="0">Activo</option>
                                     <option value="1">Inactivo</option>
@@ -123,10 +123,11 @@
 
                         <!-- Grupo: sexoBiologico -->
                         <div class="formulario__grupo" id="grupo__sexoBiologico">
-                            <label for="sexoBiologico" class="formulario__label">Genero</label>
+                            <label for="sexoBiologico" class="formulario__label">Sexo
+                                Biologico</label>
                             <div class="formulario__grupo-input">
                                 <input type="text" class="formulario__input" name="sexoBiologico" id="sexoBiologico"
-                                    placeholder="Masculino/Femenino">
+                                    placeholder="Masculino/Femenino" disabled="">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                             <p class="formulario__input-error">El campo no puede contener numeros.
@@ -197,8 +198,8 @@
             <div class="formulario__grupo" id="grupo__observaciones">
                 <label for="observacion" class="formulario__label">Observaciones</label>
                 <div class="formulario__grupo-input">
-                    <textarea class="formulario__input" name="observacion" id="observacion" cols="30"
-                        rows="10"></textarea>
+                    <textarea class="formulario__input" name="observacion" id="observacion" cols="30" rows="10"
+                        disabled="false"></textarea>
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
                 <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
@@ -222,7 +223,7 @@
 
 
             <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <button type="submit" class="formulario__btn">Enviar</button>
+                <button type="submit" class="formulario__btn">Guardar</button>
                 <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario
                     enviado
                     exitosamente!</p>
@@ -231,18 +232,13 @@
             <div class="cancelar">
                 <a href="/acudientes" type="button" class="btn btn-danger">Cancelar</a>
             </div>
-
-
-
-
         </form>
     </div>
 </div>
 </div>
 </div>
 
-
-<script src="..\js\acudiente\funcionesRegistrar.js"></script>
+<script src="../js/acudiente/funcionesEditar.js"></script>
 
 {{>footer}}
 

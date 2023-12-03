@@ -47,8 +47,14 @@ app.get('/Donaciones/Donante', (req, res) => {
 app.get("/donantes", (req, res) => {
     res.render("indexDonantes.hbs");
 });
+app.get("/visualizarAcudiente", (req, res) => {
+    res.render("visualizarAcudiente.hbs");
+});
 
 app.get("/medicamentos", (req, res) => {
+    res.render("indexMedicamentos.hbs");
+});
+app.post("/medicamentos", (req, res) => {
     res.render("indexMedicamentos.hbs");
 });
 app.get('/registrarmediamento', (req, res) => {
